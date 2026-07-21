@@ -1,102 +1,2089 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fly or Die - Arcade Edition</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fly or Die - Modern Arcade Game">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@400;700&display=swap">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Fly or Die - Ultimate Survival Game</title>
+
+<!-- PWA Meta Tags -->
+<meta name="description" content="An addictive survival game where you grow by eating smaller creatures while avoiding bigger threats. Featuring power-ups, boss battles, and multiple game modes!" />
+<meta name="theme-color" content="#ff0000" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Fly or Die" />
+
+<!-- PWA Links -->
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
+<link rel="apple-touch-icon" href="./icon-192.png" />
+<style>
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    background: radial-gradient(circle at center, #121212 0%, #000 100%);
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    user-select: none;
+  }
+  #gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, #220000 0%, #110000 90%);
+    border: 3px solid #f00;
+    box-shadow: 0 0 20px #f00, inset 0 0 20px rgba(255, 0, 0, 0.1);
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  /* Animated background stars */
+  canvas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+      radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+      radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+      radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+      radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 3s linear infinite;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  
+  @keyframes sparkle {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-100px); }
+  }
+  #ui {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    color: #f00;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 5px #f00;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+  }
+  #startScreen, #gameOverScreen, #pauseMenu, #settingsMenu, #characterScreen, #achievementsScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30,0,0,0.9);
+    border: 2px solid #f00;
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 400px;
+    box-shadow: 0 0 20px #f00;
+    text-align: center;
+    z-index: 20;
+    user-select: text;
+  }
+  #startScreen h1, #gameOverScreen h1 {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    color: #f00;
+    text-shadow: 0 0 15px #f00;
+  }
+  #startScreen p, #gameOverScreen p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  /* Loading Screen */
+  #loadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #220000 0%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #f00;
+    text-align: center;
+  }
+  
+  .loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 0, 0, 0.3);
+    border-top: 4px solid #f00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #f00;
+  }
+  
+  .loading-progress {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .loading-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #f00, #ff6666);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+  }
+  
+  /* Transition effects */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+  }
+  
+  /* Enhanced button effects */
+  button {
+    background: linear-gradient(145deg, #f00, #c00);
+    border: none;
+    padding: 14px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #f00, 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(145deg, #ff3333, #e00);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #f00, 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  button:hover::before {
+    left: 100%;
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px #f00, 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .hidden {
+    display: none;
+  }
+  #leaderboard {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto;
+    color: #f00;
+    border-top: 1px solid #f00;
+    padding-top: 10px;
+  }
+  #leaderboard h3 {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+  }
+  #leaderboard ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+  #leaderboard li {
+    margin-bottom: 5px;
+  }
+  #powerupIndicator {
+    font-size: 16px;
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Mobile Controls */
+  #mobileControls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 30;
+    pointer-events: none;
+  }
+  
+  .mobile-control-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #f00;
+    pointer-events: auto;
+  }
+  
+  .mobile-btn {
+    background: rgba(255, 0, 0, 0.8);
+    border: 2px solid #f00;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .mobile-btn:active {
+    background: rgba(255, 0, 0, 1);
+    transform: scale(0.95);
+  }
+  
+  .mobile-btn.center {
+    background: rgba(255, 255, 0, 0.8);
+    border-color: #ff0;
+    color: #000;
+  }
+  
+  /* Pause Menu */
+  #pauseMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30,0,0,0.95);
+    border: 2px solid #f00;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    z-index: 25;
+    max-width: 300px;
+  }
+  
+  #pauseMenu h2 {
+    color: #f00;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 10px #f00;
+  }
+  
+  .menu-btn {
+    background-color: #f00;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-btn:hover {
+    background-color: #c00;
+  }
+  
+  /* Settings Menu */
+  #settingsMenu, #characterScreen, #achievementsScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30,0,0,0.95);
+    border: 2px solid #f00;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    z-index: 25;
+    max-width: 400px;
+  }
+
+  #characterScreen, #achievementsScreen {
+    text-align: center;
+  }
+
+  .character-option {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #666;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    color: #fff;
+  }
+
+  .character-option:hover {
+    border-color: #f00;
+  }
+
+  .character-option.selected {
+    border-color: #0f0;
+    background: rgba(0, 255, 0, 0.1);
+  }
+
+  .character-option.locked {
+    border-color: #444;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .achievement-item {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 8px 0;
+    color: #fff;
+    text-align: left;
+  }
+
+  .achievement-item.unlocked {
+    border-left: 4px solid #0f0;
+  }
+
+  .achievement-item.locked {
+    border-left: 4px solid #666;
+    opacity: 0.6;
+  }
+  
+  /* Tutorial styling */
+  .tutorial-step {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #f00;
+  }
+  
+  .tutorial-step h3 {
+    color: #f00;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .tutorial-step p {
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    color: #fff;
+  }
+  
+  .setting-row label {
+    font-weight: bold;
+  }
+  
+  .setting-row input[type="range"] {
+    width: 120px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #mobileControls {
+      display: block;
+    }
+    
+    canvas {
+      height: 70vh;
+    }
+    
+    #ui {
+      font-size: 16px;
+    }
+    
+    #startScreen, #gameOverScreen, #pauseMenu, #settingsMenu {
+      max-width: 90vw;
+      padding: 20px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    canvas {
+      height: 85vh;
+    }
+    
+    #mobileControls {
+      bottom: 10px;
+    }
+    
+    .mobile-control-pad {
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(3, 50px);
+      gap: 8px;
+      padding: 8px;
+    }
+  }
+</style>
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="stars2"></div>
-  <div class="stars3"></div>
-  
-  <div id="game-container">
-    <canvas id="game-canvas" width="480" height="720"></canvas>
-    
-    <div id="ui-overlay">
-      <div id="main-menu" class="visible">
-        <div class="menu-glow"></div>
-        <h1 class="neon-title">
-          <span class="glitch" data-text="FLY">FLY</span>
-          <span class="or">or</span>
-          <span class="glitch" data-text="DIE">DIE</span>
-        </h1>
-        <p class="subtitle">Arcade Challenge - Tap or click to fly!</p>
-        <div class="btn-group">
-          <button class="btn btn-primary" id="start-btn">
-            <span class="btn-content">Start Game</span>
-            <span class="btn-shine"></span>
-          </button>
-          <button class="btn btn-secondary" id="show-lb-btn">
-            <span class="btn-content">Leaderboard</span>
-            <span class="btn-shine"></span>
-          </button>
-        </div>
-        <p class="footer-text">v1.0 | © 2025 deepakrajjs</p>
-      </div>
-      
-      <div id="level-complete">
-        <div class="success-animation"></div>
-        <h1 class="modal-title">Level Complete!</h1>
-        <p id="next-level-info" class="modal-text"></p>
-        <button class="btn btn-success" id="next-level-btn">
-          <span class="btn-content">Next Level</span>
-          <span class="btn-shine"></span>
-        </button>
-      </div>
-      
-      <div id="game-over">
-        <div class="fail-animation"></div>
-        <h1 class="modal-title game-over-title">Game Over</h1>
-        <p id="final-score" class="modal-text"></p>
-        <div class="btn-group">
-          <button class="btn btn-primary" id="restart-btn">
-            <span class="btn-content">Restart</span>
-            <span class="btn-shine"></span>
-          </button>
-          <button class="btn btn-secondary" id="show-lb-btn-over">
-            <span class="btn-content">Leaderboard</span>
-            <span class="btn-shine"></span>
-          </button>
-        </div>
-      </div>
-      
-      <div id="leaderboard">
-        <h1 class="modal-title">Leaderboard</h1>
-        <div class="lb-container">
-          <ol id="lb-list"></ol>
-        </div>
-        <button class="btn btn-secondary" id="close-lb-btn">
-          <span class="btn-content">Back</span>
-          <span class="btn-shine"></span>
-        </button>
-      </div>
+<div id="gameContainer">
+  <!-- Loading Screen -->
+  <div id="loadingScreen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Fly or Die</div>
+    <div style="font-size: 16px; color: #ccc;">Loading Ultimate Survival Game...</div>
+    <div class="loading-progress">
+      <div class="loading-bar" id="loadingBar"></div>
     </div>
-    
-    <div id="scoreboard" class="stat-box">
-      <div class="stat-icon">⭐</div>
-      <div class="stat-content">
-        <div class="stat-label">Score</div>
-        <div class="stat-value">0</div>
-      </div>
-    </div>
-    
-    <div id="level-indicator" class="stat-box">
-      <div class="stat-icon">🎯</div>
-      <div class="stat-content">
-        <div class="stat-label">Level</div>
-        <div class="stat-value">1</div>
-      </div>
-    </div>
-    
-    <button id="mute-btn" class="control-btn" title="Mute/Unmute Sound">
-      <span class="sound-icon">🔊</span>
-    </button>
   </div>
+
+  <canvas id="gameCanvas" width="900" height="600"></canvas>
+  <div id="ui">
+    <div id="score">Score: 0</div>
+    <div id="lives">Lives: 10</div>
+    <div id="powerupIndicator"></div>
+  </div>
+
+  <div id="startScreen">
+    <h1>Fly or Die</h1>
+    <h2>Ultimate Survival Game</h2>
+    <p>Control your creature with arrow keys, WASD, or touch controls.</p>
+    <p>Eat food and smaller enemies to grow and score points.</p>
+    <p>Avoid enemies bigger than you or lose a life.</p>
+    <p>You have 10 lives. Survive and score as much as possible!</p>
+    <p>Collect power-ups for temporary boosts.</p>
+    <p>Difficulty increases over time with more and faster enemies!</p>
+    <button id="startBtn">Start Game</button>
+    <button id="tutorialBtn" class="menu-btn">Tutorial</button>
+    <button id="characterBtn" class="menu-btn">Select Character</button>
+    <button id="settingsBtn" class="menu-btn">Settings</button>
+    <button id="achievementsBtn" class="menu-btn">Achievements</button>
+  </div>
+
+  <div id="characterScreen" class="hidden">
+    <h2 style="color: #f00; text-align: center; margin-bottom: 20px;">Select Character</h2>
+    <div id="characterList"></div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="selectCharacterBtn" class="menu-btn">Select</button>
+      <button id="backToMenuBtn" class="menu-btn">Back</button>
+    </div>
+  </div>
+
+  <div id="achievementsScreen" class="hidden">
+    <h2 style="color: #f00; text-align: center; margin-bottom: 20px;">Achievements</h2>
+    <div id="achievementsList" style="max-height: 300px; overflow-y: auto;"></div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="backFromAchievementsBtn" class="menu-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Tutorial Screen -->
+  <div id="tutorialScreen" class="hidden">
+    <h2 style="color: #f00; text-align: center; margin-bottom: 20px;">How to Play</h2>
+    <div id="tutorialContent" style="text-align: left; max-height: 300px; overflow-y: auto;">
+      <div class="tutorial-step">
+        <h3>🎮 Controls</h3>
+        <p>Use WASD keys, arrow keys, or touch controls to move your creature around the battlefield.</p>
+      </div>
+      <div class="tutorial-step">
+        <h3>🍎 Eating</h3>
+        <p>Eat yellow food items to grow larger and gain points. Larger creatures can eat smaller enemies!</p>
+      </div>
+      <div class="tutorial-step">
+        <h3>⚔️ Combat</h3>
+        <p>Avoid enemies larger than you - they'll damage you! Use strategy to grow and overcome threats.</p>
+      </div>
+      <div class="tutorial-step">
+        <h3>⭐ Power-ups</h3>
+        <p>Collect star-shaped power-ups for temporary abilities:
+        <br>• 🔵 Speed Boost - Move faster
+        <br>• 🟡 Shield - Temporary invincibility  
+        <br>• 🔶 Magnetism - Attract nearby food</p>
+      </div>
+      <div class="tutorial-step">
+        <h3>👹 Boss Battles</h3>
+        <p>Every 3 levels, face powerful boss enemies with special attacks and multiple phases!</p>
+      </div>
+      <div class="tutorial-step">
+        <h3>🏆 Characters & Achievements</h3>
+        <p>Unlock new characters by completing achievements. Each character has unique abilities!</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="startTutorialBtn" class="menu-btn">Play Tutorial</button>
+      <button id="backFromTutorialBtn" class="menu-btn">Back</button>
+    </div>
+  </div>
+
+  <div id="gameOverScreen" class="hidden">
+    <h1>Game Over</h1>
+    <p id="finalScore"></p>
+    <div id="leaderboard">
+      <h3>Leaderboard</h3>
+      <ol id="leaderboardList"></ol>
+    </div>
+    <button id="restartBtn">Play Again</button>
+    <button id="mainMenuBtn" class="menu-btn">Main Menu</button>
+  </div>
+
+  <div id="pauseMenu" class="hidden">
+    <h2>Game Paused</h2>
+    <button id="resumeBtn" class="menu-btn">Resume</button>
+    <button id="pauseSettingsBtn" class="menu-btn">Settings</button>
+    <button id="quitBtn" class="menu-btn">Quit to Menu</button>
+  </div>
+
+  <div id="settingsMenu" class="hidden">
+    <h2 style="color: #f00; text-align: center; margin-bottom: 20px;">Settings</h2>
+    <div class="setting-row">
+      <label for="soundVolume">Sound Volume:</label>
+      <input type="range" id="soundVolume" min="0" max="100" value="50">
+    </div>
+    <div class="setting-row">
+      <label for="musicVolume">Music Volume:</label>
+      <input type="range" id="musicVolume" min="0" max="100" value="30">
+    </div>
+    <div class="setting-row">
+      <label for="showFPS">Show FPS:</label>
+      <input type="checkbox" id="showFPS">
+    </div>
+    <div class="setting-row">
+      <label for="particleCount">Particle Effects:</label>
+      <select id="particleCount">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="saveSettingsBtn" class="menu-btn">Save & Close</button>
+    </div>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div id="mobileControls">
+    <div class="mobile-control-pad">
+      <div></div>
+      <div class="mobile-btn" data-key="ArrowUp">↑</div>
+      <div></div>
+      <div class="mobile-btn" data-key="ArrowLeft">←</div>
+      <div class="mobile-btn center" data-key="pause">⏸</div>
+      <div class="mobile-btn" data-key="ArrowRight">→</div>
+      <div></div>
+      <div class="mobile-btn" data-key="ArrowDown">↓</div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // PWA Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+
+  // Game Settings
+  let gameSettings = {
+    soundVolume: 50,
+    musicVolume: 30,
+    showFPS: false,
+    particleCount: 'medium'
+  };
+
+  // Game modes and progression
+  let gameMode = 'classic'; // 'classic', 'survival', 'timeAttack', 'bossRush'
+  let currentLevel = 1;
+  let gameTime = 0;
+  let achievements = [];
+  let unlockedCharacters = ['basic'];
+  let selectedCharacter = 'basic';
   
-  <script src="script.js"></script>
+  // Character definitions
+  const characterTypes = {
+    basic: {
+      name: 'Basic Cell',
+      color: '#4CAF50',
+      speed: 3,
+      size: 20,
+      ability: 'none',
+      unlockRequirement: 'default'
+    },
+    speedy: {
+      name: 'Speed Demon',
+      color: '#00FFFF',
+      speed: 5,
+      size: 18,
+      ability: 'speed',
+      unlockRequirement: 'score_1000'
+    },
+    tank: {
+      name: 'Heavy Tank',
+      color: '#FFD700',
+      speed: 2,
+      size: 25,
+      ability: 'armor',
+      unlockRequirement: 'survive_5min'
+    },
+    hunter: {
+      name: 'Hunter',
+      color: '#FF4500',
+      speed: 4,
+      size: 20,
+      ability: 'tracking',
+      unlockRequirement: 'eat_100_enemies'
+    }
+  };
+
+  // Achievement definitions
+  const achievementList = [
+    { id: 'first_score', name: 'First Points', description: 'Score your first points', requirement: 'score_1', unlocked: false },
+    { id: 'survivor', name: 'Survivor', description: 'Survive for 5 minutes', requirement: 'time_300', unlocked: false },
+    { id: 'high_scorer', name: 'High Scorer', description: 'Score 1000 points', requirement: 'score_1000', unlocked: false },
+    { id: 'giant_slayer', name: 'Giant Slayer', description: 'Defeat a boss enemy', requirement: 'kill_boss', unlocked: false },
+    { id: 'collector', name: 'Power Collector', description: 'Collect 50 power-ups', requirement: 'powerups_50', unlocked: false },
+    { id: 'speed_demon', name: 'Speed Demon', description: 'Unlock the Speed character', requirement: 'unlock_speedy', unlocked: false }
+  ];
+
+  // Load settings from localStorage
+  function loadSettings() {
+    const saved = localStorage.getItem('flyOrDieSettings');
+    if (saved) {
+      gameSettings = { ...gameSettings, ...JSON.parse(saved) };
+      updateSettingsUI();
+    }
+    
+    // Load achievements
+    const savedAchievements = localStorage.getItem('flyOrDieAchievements');
+    if (savedAchievements) {
+      achievements = JSON.parse(savedAchievements);
+    } else {
+      achievements = [...achievementList];
+    }
+    
+    // Load unlocked characters
+    const savedCharacters = localStorage.getItem('flyOrDieCharacters');
+    if (savedCharacters) {
+      unlockedCharacters = JSON.parse(savedCharacters);
+    }
+  }
+
+  function saveSettings() {
+    localStorage.setItem('flyOrDieSettings', JSON.stringify(gameSettings));
+    localStorage.setItem('flyOrDieAchievements', JSON.stringify(achievements));
+    localStorage.setItem('flyOrDieCharacters', JSON.stringify(unlockedCharacters));
+  }
+
+  function checkAchievements() {
+    achievements.forEach(achievement => {
+      if (achievement.unlocked) return;
+      
+      let unlocked = false;
+      
+      switch (achievement.requirement) {
+        case 'score_1':
+          unlocked = player.score >= 1;
+          break;
+        case 'score_1000':
+          unlocked = player.score >= 1000;
+          break;
+        case 'time_300':
+          unlocked = gameTime >= 300 * 60; // 5 minutes at 60fps
+          break;
+        case 'powerups_50':
+          unlocked = player.powerupsCollected >= 50;
+          break;
+        case 'kill_boss':
+          unlocked = player.bossesKilled >= 1;
+          break;
+        case 'unlock_speedy':
+          unlocked = unlockedCharacters.includes('speedy');
+          break;
+      }
+      
+      if (unlocked) {
+        achievement.unlocked = true;
+        showAchievement(achievement);
+        
+        // Unlock characters based on achievements
+        if (achievement.id === 'high_scorer' && !unlockedCharacters.includes('speedy')) {
+          unlockedCharacters.push('speedy');
+        }
+        if (achievement.id === 'survivor' && !unlockedCharacters.includes('tank')) {
+          unlockedCharacters.push('tank');
+        }
+      }
+    });
+  }
+
+  function showAchievement(achievement) {
+    // Create achievement notification
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      background: rgba(255, 215, 0, 0.9);
+      color: #000;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #FFD700;
+      z-index: 50;
+      font-weight: bold;
+      max-width: 250px;
+      animation: slideIn 0.5s ease-out;
+    `;
+    notification.innerHTML = `
+      <div style="font-size: 14px;">🏆 Achievement Unlocked!</div>
+      <div style="font-size: 16px; margin: 5px 0;">${achievement.name}</div>
+      <div style="font-size: 12px;">${achievement.description}</div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Add CSS animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Remove after 4 seconds
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 4000);
+    
+    playSound(800, 0.3, 'square', 0.4);
+  }
+
+  function updateSettingsUI() {
+    document.getElementById('soundVolume').value = gameSettings.soundVolume;
+    document.getElementById('musicVolume').value = gameSettings.musicVolume;
+    document.getElementById('showFPS').checked = gameSettings.showFPS;
+    document.getElementById('particleCount').value = gameSettings.particleCount;
+  }
+
+  function renderCharacterSelection() {
+    const characterList = document.getElementById('characterList');
+    characterList.innerHTML = '';
+    
+    Object.keys(characterTypes).forEach(charKey => {
+      const char = characterTypes[charKey];
+      const isUnlocked = unlockedCharacters.includes(charKey);
+      const isSelected = selectedCharacter === charKey;
+      
+      const div = document.createElement('div');
+      div.className = `character-option ${isSelected ? 'selected' : ''} ${!isUnlocked ? 'locked' : ''}`;
+      div.innerHTML = `
+        <div style="font-weight: bold; color: ${char.color};">${char.name}</div>
+        <div style="font-size: 12px; margin-top: 5px;">
+          Speed: ${char.speed} | Size: ${char.size} | Ability: ${char.ability}
+        </div>
+        ${!isUnlocked ? '<div style="color: #f00; font-size: 10px;">LOCKED</div>' : ''}
+      `;
+      
+      if (isUnlocked) {
+        div.addEventListener('click', () => {
+          selectedCharacter = charKey;
+          renderCharacterSelection();
+        });
+      }
+      
+      characterList.appendChild(div);
+    });
+  }
+
+  function renderAchievements() {
+    const achievementsList = document.getElementById('achievementsList');
+    achievementsList.innerHTML = '';
+    
+    achievements.forEach(achievement => {
+      const div = document.createElement('div');
+      div.className = `achievement-item ${achievement.unlocked ? 'unlocked' : 'locked'}`;
+      div.innerHTML = `
+        <div style="font-weight: bold;">${achievement.unlocked ? '🏆' : '🔒'} ${achievement.name}</div>
+        <div style="font-size: 12px; margin-top: 5px;">${achievement.description}</div>
+      `;
+      achievementsList.appendChild(div);
+    });
+  }
+
+  // Audio context and sounds
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
+
+  // Background music system
+  let backgroundMusic = null;
+  let musicPlaying = false;
+
+  function createBackgroundMusic() {
+    if (gameSettings.musicVolume === 0) return;
+    
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+    gainNode.gain.setValueAtTime((gameSettings.musicVolume / 100) * 0.1, audioCtx.currentTime);
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    // Create a simple melody pattern
+    const notes = [220, 246.94, 261.63, 293.66, 329.63]; // A3, B3, C4, D4, E4
+    let noteIndex = 0;
+    
+    const playNote = () => {
+      if (musicPlaying) {
+        oscillator.frequency.setValueAtTime(notes[noteIndex], audioCtx.currentTime);
+        noteIndex = (noteIndex + 1) % notes.length;
+        setTimeout(playNote, 1000); // Change note every second
+      }
+    };
+    
+    oscillator.start();
+    playNote();
+    
+    return { oscillator, gainNode };
+  }
+
+  function startBackgroundMusic() {
+    if (!musicPlaying && gameSettings.musicVolume > 0) {
+      musicPlaying = true;
+      backgroundMusic = createBackgroundMusic();
+    }
+  }
+
+  function stopBackgroundMusic() {
+    if (backgroundMusic && musicPlaying) {
+      backgroundMusic.oscillator.stop();
+      musicPlaying = false;
+      backgroundMusic = null;
+    }
+  }
+
+  function playSound(freq, duration, type = 'sine', volume = 0.1) {
+    if (gameSettings.soundVolume === 0) return;
+    
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    oscillator.type = type;
+    oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    gainNode.gain.setValueAtTime((volume * gameSettings.soundVolume) / 100, audioCtx.currentTime);
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + duration);
+  }
+
+  // Particle system for effects
+  class Particle {
+    constructor(x, y, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = Math.random() * 3 + 2;
+      this.color = color;
+      this.vx = (Math.random() - 0.5) * 4;
+      this.vy = (Math.random() - 0.5) * 4;
+      this.alpha = 1;
+      this.life = 30 + Math.random() * 20;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.alpha -= 1 / this.life;
+      this.radius *= 0.95;
+    }
+    draw(ctx) {
+      ctx.save();
+      ctx.globalAlpha = this.alpha;
+      ctx.beginPath();
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 10;
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+  // FPS Counter
+  class FPSCounter {
+    constructor() {
+      this.fps = 0;
+      this.frame = 0;
+      this.lastTime = performance.now();
+    }
+    
+    update() {
+      this.frame++;
+      const now = performance.now();
+      if (now - this.lastTime >= 1000) {
+        this.fps = Math.round((this.frame * 1000) / (now - this.lastTime));
+        this.frame = 0;
+        this.lastTime = now;
+      }
+    }
+    
+    draw(ctx) {
+      if (!gameSettings.showFPS) return;
+      ctx.save();
+      ctx.fillStyle = '#00ff00';
+      ctx.font = '16px monospace';
+      ctx.fillText(`FPS: ${this.fps}`, 10, canvas.height - 10);
+      ctx.restore();
+    }
+  }
+
+  // Entity base class
+  class Entity {
+    constructor(x, y, radius, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = radius;
+      this.color = color;
+    }
+    draw(ctx) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 15;
+      ctx.fill();
+      ctx.restore();
+    }
+    distanceTo(other) {
+      const dx = this.x - other.x;
+      const dy = this.y - other.y;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+    collidesWith(other) {
+      return this.distanceTo(other) < this.radius + other.radius;
+    }
+  }
+
+  // Player class
+  class Player extends Entity {
+    constructor(x, y, characterType = 'basic') {
+      const char = characterTypes[characterType];
+      super(x, y, char.size, char.color);
+      this.speed = char.speed;
+      this.baseSpeed = char.speed;
+      this.characterType = characterType;
+      this.ability = char.ability;
+      this.vx = 0;
+      this.vy = 0;
+      this.score = 0;
+      this.lives = 10;
+      this.powerup = null;
+      this.powerupTimer = 0;
+      this.powerupsCollected = 0;
+      this.enemiesEaten = 0;
+      this.bossesKilled = 0;
+      this.invulnerable = false;
+      this.invulnerableTimer = 0;
+    }
+    
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      
+      // Keep player inside canvas
+      this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
+      this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
+      
+      // Powerup timer decrement
+      if (this.powerupTimer > 0) {
+        this.powerupTimer--;
+        if (this.powerupTimer === 0) {
+          this.powerup = null;
+          powerupIndicator.textContent = '';
+          this.speed = this.baseSpeed;
+          if (this.ability !== 'speed') {
+            this.color = characterTypes[this.characterType].color;
+          }
+        }
+      }
+      
+      // Invulnerability timer
+      if (this.invulnerableTimer > 0) {
+        this.invulnerableTimer--;
+        this.invulnerable = this.invulnerableTimer > 0;
+      }
+    }
+    
+    draw(ctx) {
+      ctx.save();
+      
+      // Flashing effect when invulnerable
+      if (this.invulnerable && Math.floor(frameCount / 10) % 2) {
+        ctx.globalAlpha = 0.5;
+      }
+      
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 15;
+      ctx.fill();
+      
+      // Draw character ability indicator
+      if (this.ability === 'armor') {
+        ctx.strokeStyle = '#FFD700';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+      } else if (this.ability === 'tracking') {
+        // Draw crosshair
+        ctx.strokeStyle = '#FF4500';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(this.x - this.radius/2, this.y);
+        ctx.lineTo(this.x + this.radius/2, this.y);
+        ctx.moveTo(this.x, this.y - this.radius/2);
+        ctx.lineTo(this.x, this.y + this.radius/2);
+        ctx.stroke();
+      }
+      
+      ctx.restore();
+    }
+    
+    grow(amount) {
+      this.radius += amount;
+      this.score += Math.floor(amount * 10);
+      scoreDisplay.textContent = 'Score: ' + this.score;
+    }
+    
+    loseLife() {
+      if (this.invulnerable) return;
+      
+      this.lives--;
+      livesDisplay.textContent = 'Lives: ' + this.lives;
+      this.invulnerable = true;
+      this.invulnerableTimer = 120; // 2 seconds at 60fps
+      
+      playSound(150, 0.2, 'triangle', 0.3);
+      
+      if (this.lives <= 0) {
+        gameOver();
+      }
+    }
+    
+    applyPowerup(type) {
+      this.powerup = type;
+      this.powerupTimer = 600; // 10 seconds at 60fps
+      this.powerupsCollected++;
+      powerupIndicator.textContent = 'Power-up: ' + type;
+      
+      if (type === 'speed') {
+        this.speed = this.baseSpeed * 2;
+        this.color = '#00FFFF';
+      } else if (type === 'shield') {
+        this.color = '#FFD700';
+      } else if (type === 'magnetism') {
+        this.color = '#FF69B4';
+      }
+      
+      playSound(600, 0.3, 'square', 0.4);
+    }
+  }
+
+  // Food class
+  class Food extends Entity {
+    constructor(x, y) {
+      super(x, y, 8, '#FFEB3B');
+    }
+  }
+
+  // Powerup class
+  class Powerup extends Entity {
+    constructor(x, y, type) {
+      super(x, y, 10, type === 'speed' ? '#00FFFF' : type === 'shield' ? '#FFD700' : '#FF69B4');
+      this.type = type;
+      this.angle = 0;
+    }
+    draw(ctx) {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.beginPath();
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 15;
+      
+      if (this.type === 'magnetism') {
+        // Draw diamond shape for magnetism
+        ctx.moveTo(0, -this.radius);
+        ctx.lineTo(this.radius, 0);
+        ctx.lineTo(0, this.radius);
+        ctx.lineTo(-this.radius, 0);
+      } else {
+        // Draw star shape for other powerups
+        ctx.moveTo(0, -this.radius);
+        for (let i = 0; i < 5; i++) {
+          ctx.lineTo(this.radius * Math.cos((i * 2 * Math.PI) / 5), this.radius * Math.sin((i * 2 * Math.PI) / 5));
+          ctx.lineTo(this.radius / 2 * Math.cos(((i * 2 + 1) * Math.PI) / 5), this.radius / 2 * Math.sin(((i * 2 + 1) * Math.PI) / 5));
+        }
+      }
+      
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+      this.angle += 0.05;
+    }
+  }
+
+  // Boss Enemy class
+  class BossEnemy extends Entity {
+    constructor(x, y) {
+      super(x, y, 60, '#8B0000');
+      this.speed = 1.5;
+      this.vx = 0;
+      this.vy = 0;
+      this.health = 10;
+      this.maxHealth = 10;
+      this.shootTimer = 0;
+      this.moveTimer = 0;
+      this.phase = 1;
+      this.isShaking = false;
+      this.shakeTimer = 0;
+    }
+    
+    update(player) {
+      // Boss AI phases
+      if (this.health <= this.maxHealth / 2 && this.phase === 1) {
+        this.phase = 2;
+        this.speed = 2;
+        this.color = '#FF0000';
+      }
+      
+      this.moveTimer--;
+      if (this.moveTimer <= 0) {
+        // Move towards player
+        const dx = player.x - this.x;
+        const dy = player.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 0) {
+          this.vx = (dx / dist) * this.speed;
+          this.vy = (dy / dist) * this.speed;
+        }
+        this.moveTimer = 120 + Math.floor(Math.random() * 60);
+      }
+      
+      this.x += this.vx;
+      this.y += this.vy;
+      
+      // Keep boss inside canvas
+      this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
+      this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
+      
+      // Boss shooting pattern
+      this.shootTimer--;
+      if (this.shootTimer <= 0) {
+        this.shootProjectiles(player);
+        this.shootTimer = this.phase === 1 ? 180 : 120;
+      }
+      
+      // Shake effect when damaged
+      if (this.shakeTimer > 0) {
+        this.shakeTimer--;
+        this.isShaking = this.shakeTimer > 0;
+      }
+    }
+    
+    shootProjectiles(player) {
+      const projectileCount = this.phase === 1 ? 3 : 6;
+      const speed = 3;
+      
+      for (let i = 0; i < projectileCount; i++) {
+        const angle = (Math.PI * 2 * i) / projectileCount;
+        const vx = Math.cos(angle) * speed;
+        const vy = Math.sin(angle) * speed;
+        projectiles.push(new Projectile(this.x, this.y, vx, vy));
+      }
+      
+      playSound(1200, 0.15, 'sawtooth', 0.3);
+    }
+    
+    takeDamage() {
+      this.health--;
+      this.isShaking = true;
+      this.shakeTimer = 30;
+      playSound(300, 0.2, 'triangle', 0.4);
+      
+      if (this.health <= 0) {
+        return true; // Boss defeated
+      }
+      return false;
+    }
+    
+    draw(ctx) {
+      ctx.save();
+      
+      // Shake effect
+      if (this.isShaking) {
+        ctx.translate(Math.random() * 4 - 2, Math.random() * 4 - 2);
+      }
+      
+      // Draw boss body
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 20;
+      ctx.fill();
+      
+      // Draw spikes around boss
+      ctx.strokeStyle = this.color;
+      ctx.lineWidth = 4;
+      for (let i = 0; i < 8; i++) {
+        const angle = (Math.PI * 2 * i) / 8;
+        const innerRadius = this.radius;
+        const outerRadius = this.radius + 15;
+        ctx.beginPath();
+        ctx.moveTo(
+          this.x + Math.cos(angle) * innerRadius,
+          this.y + Math.sin(angle) * innerRadius
+        );
+        ctx.lineTo(
+          this.x + Math.cos(angle) * outerRadius,
+          this.y + Math.sin(angle) * outerRadius
+        );
+        ctx.stroke();
+      }
+      
+      // Draw health bar
+      const barWidth = 100;
+      const barHeight = 8;
+      const barX = this.x - barWidth / 2;
+      const barY = this.y - this.radius - 30;
+      
+      ctx.fillStyle = '#FF0000';
+      ctx.fillRect(barX, barY, barWidth, barHeight);
+      
+      ctx.fillStyle = '#00FF00';
+      const healthPercent = this.health / this.maxHealth;
+      ctx.fillRect(barX, barY, barWidth * healthPercent, barHeight);
+      
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(barX, barY, barWidth, barHeight);
+      
+      ctx.restore();
+    }
+  }
+
+  // Enemy class with AI behaviors
+  class Enemy extends Entity {
+    constructor(x, y, radius, speed, color, behavior) {
+      super(x, y, radius, color);
+      this.speed = speed;
+      this.vx = (Math.random() * 2 - 1) * speed;
+      this.vy = (Math.random() * 2 - 1) * speed;
+      this.behavior = behavior; // 'wander', 'chase', 'flee'
+      this.changeDirTimer = 0;
+      this.shootTimer = Math.floor(Math.random() * 300) + 200; // For shooting behavior
+    }
+    update(player) {
+      if (this.behavior === 'chase') {
+        // Move toward player if smaller
+        const dx = player.x - this.x;
+        const dy = player.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 0) {
+          this.vx = (dx / dist) * this.speed;
+          this.vy = (dy / dist) * this.speed;
+        }
+      } else if (this.behavior === 'flee') {
+        // Move away from player if bigger
+        const dx = this.x - player.x;
+        const dy = this.y - player.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 0) {
+          this.vx = (dx / dist) * this.speed;
+          this.vy = (dy / dist) * this.speed;
+        }
+      } else if (this.behavior === 'shoot') {
+        // Stay mostly still and shoot projectiles at player
+        this.vx = 0;
+        this.vy = 0;
+        this.shootTimer--;
+        if (this.shootTimer <= 0) {
+          this.shootTimer = Math.floor(Math.random() * 300) + 200;
+          shootProjectile(this);
+        }
+      } else {
+        // Wander randomly, change direction occasionally
+        this.changeDirTimer--;
+        if (this.changeDirTimer <= 0) {
+          this.vx = (Math.random() * 2 - 1) * this.speed;
+          this.vy = (Math.random() * 2 - 1) * this.speed;
+          this.changeDirTimer = 60 + Math.floor(Math.random() * 120);
+        }
+      }
+      this.x += this.vx;
+      this.y += this.vy;
+      // Bounce off walls
+      if (this.x < this.radius) {
+        this.x = this.radius;
+        this.vx *= -1;
+      }
+      if (this.x > canvas.width - this.radius) {
+        this.x = canvas.width - this.radius;
+        this.vx *= -1;
+      }
+      if (this.y < this.radius) {
+        this.y = this.radius;
+        this.vy *= -1;
+      }
+      if (this.y > canvas.height - this.radius) {
+        this.y = canvas.height - this.radius;
+        this.vy *= -1;
+      }
+    }
+  }
+
+  // Projectile class for enemy shooting
+  class Projectile extends Entity {
+    constructor(x, y, vx, vy) {
+      super(x, y, 5, '#FF4500');
+      this.vx = vx;
+      this.vy = vy;
+      this.life = 180; // frames
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.life--;
+    }
+  }
+
+  // Globals
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const scoreDisplay = document.getElementById('score');
+  const livesDisplay = document.getElementById('lives');
+  const powerupIndicator = document.getElementById('powerupIndicator');
+  const startScreen = document.getElementById('startScreen');
+  const startBtn = document.getElementById('startBtn');
+  const settingsBtn = document.getElementById('settingsBtn');
+  const gameOverScreen = document.getElementById('gameOverScreen');
+  const finalScoreDisplay = document.getElementById('finalScore');
+  const leaderboardList = document.getElementById('leaderboardList');
+  const restartBtn = document.getElementById('restartBtn');
+  const mainMenuBtn = document.getElementById('mainMenuBtn');
+  const pauseMenu = document.getElementById('pauseMenu');
+  const resumeBtn = document.getElementById('resumeBtn');
+  const pauseSettingsBtn = document.getElementById('pauseSettingsBtn');
+  const quitBtn = document.getElementById('quitBtn');
+  const settingsMenu = document.getElementById('settingsMenu');
+  const saveSettingsBtn = document.getElementById('saveSettingsBtn');
+
+  let player;
+  let foods = [];
+  let enemies = [];
+  let bosses = [];
+  let powerups = [];
+  let particles = [];
+  let projectiles = [];
+  let keys = {};
+  let gameRunning = false;
+  let gamePaused = false;
+  let frameCount = 0;
+  let nextBossSpawn = 1800; // 30 seconds at 60fps
+  let fpsCounter = new FPSCounter();
+
+  // Touch controls state
+  let touchControls = {
+    up: false,
+    down: false,
+    left: false,
+    right: false
+  };
+
+  // Leaderboard management
+  function loadLeaderboard() {
+    const data = localStorage.getItem('flyOrDieLeaderboard');
+    if (data) {
+      return JSON.parse(data);
+    }
+    return [];
+  }
+  function saveLeaderboard(scores) {
+    localStorage.setItem('flyOrDieLeaderboard', JSON.stringify(scores));
+  }
+  function updateLeaderboard(score) {
+    let scores = loadLeaderboard();
+    scores.push(score);
+    scores.sort((a,b) => b - a);
+    if (scores.length > 10) scores = scores.slice(0,10);
+    saveLeaderboard(scores);
+    renderLeaderboard(scores);
+  }
+  function renderLeaderboard(scores) {
+    leaderboardList.innerHTML = '';
+    scores.forEach((score, i) => {
+      const li = document.createElement('li');
+      li.textContent = `${i+1}. ${score}`;
+      leaderboardList.appendChild(li);
+    });
+  }
+
+  // Spawn functions
+  function spawnFood() {
+    const x = Math.random() * (canvas.width - 16) + 8;
+    const y = Math.random() * (canvas.height - 16) + 8;
+    foods.push(new Food(x, y));
+  }
+  function spawnPowerup() {
+    const x = Math.random() * (canvas.width - 20) + 10;
+    const y = Math.random() * (canvas.height - 20) + 10;
+    const types = ['speed', 'shield', 'magnetism'];
+    const type = types[Math.floor(Math.random() * types.length)];
+    powerups.push(new Powerup(x, y, type));
+  }
+  
+  function spawnBoss() {
+    const x = Math.random() * (canvas.width - 120) + 60;
+    const y = Math.random() * (canvas.height - 120) + 60;
+    bosses.push(new BossEnemy(x, y));
+    playSound(200, 1, 'sawtooth', 0.5);
+  }
+  function spawnEnemy() {
+    const radius = 15 + Math.random() * 20;
+    const speed = 1 + Math.random() * 2;
+    const x = Math.random() * (canvas.width - 2 * radius) + radius;
+    const y = Math.random() * (canvas.height - 2 * radius) + radius;
+    const color = ['#F44336', '#FF5722', '#E91E63', '#9C27B0'][Math.floor(Math.random() * 4)];
+    // Randomly assign behavior, with some chance for shooting enemies
+    let behavior = 'wander';
+    if (Math.random() < 0.3) behavior = 'shoot';
+    enemies.push(new Enemy(x, y, radius, speed, color, behavior));
+  }
+
+  // Shoot projectile from enemy towards player
+  function shootProjectile(enemy) {
+    const dx = player.x - enemy.x;
+    const dy = player.y - enemy.y;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    if (dist === 0) return;
+    const speed = 5;
+    const vx = (dx / dist) * speed;
+    const vy = (dy / dist) * speed;
+    projectiles.push(new Projectile(enemy.x, enemy.y, vx, vy));
+    playSound(1200, 0.1, 'square', 0.2);
+  }
+
+  // Reset game state
+  function resetGame() {
+    player = new Player(canvas.width / 2, canvas.height / 2, selectedCharacter);
+    foods = [];
+    enemies = [];
+    bosses = [];
+    powerups = [];
+    particles = [];
+    projectiles = [];
+    keys = {};
+    touchControls = { up: false, down: false, left: false, right: false };
+    gameRunning = true;
+    gamePaused = false;
+    frameCount = 0;
+    gameTime = 0;
+    nextBossSpawn = 1800;
+    currentLevel = 1;
+    scoreDisplay.textContent = 'Score: 0';
+    livesDisplay.textContent = 'Lives: 10';
+    powerupIndicator.textContent = '';
+    hideAllMenus();
+    startBackgroundMusic();
+    // Spawn initial entities
+    for (let i = 0; i < 30; i++) spawnFood();
+    for (let i = 0; i < 10; i++) spawnEnemy();
+    for (let i = 0; i < 3; i++) spawnPowerup();
+  }
+
+  // Menu management
+  function hideAllMenus() {
+    gameOverScreen.classList.add('hidden');
+    startScreen.classList.add('hidden');
+    pauseMenu.classList.add('hidden');
+    settingsMenu.classList.add('hidden');
+    document.getElementById('characterScreen').classList.add('hidden');
+    document.getElementById('achievementsScreen').classList.add('hidden');
+    document.getElementById('tutorialScreen').classList.add('hidden');
+  }
+
+  function showMainMenu() {
+    hideAllMenus();
+    startScreen.classList.remove('hidden');
+    startScreen.classList.add('fade-in');
+    gameRunning = false;
+    gamePaused = false;
+    stopBackgroundMusic();
+  }
+
+  // Loading screen management
+  function showLoadingScreen() {
+    document.getElementById('loadingScreen').style.display = 'flex';
+    simulateLoading();
+  }
+
+  function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.classList.add('fade-out');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      loadingScreen.classList.remove('fade-out');
+    }, 500);
+  }
+
+  function simulateLoading() {
+    const loadingBar = document.getElementById('loadingBar');
+    let progress = 0;
+    
+    const interval = setInterval(() => {
+      progress += Math.random() * 15;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+        setTimeout(hideLoadingScreen, 500);
+      }
+      loadingBar.style.width = progress + '%';
+    }, 200);
+  }
+
+  function pauseGame() {
+    if (!gameRunning) return;
+    gamePaused = true;
+    pauseMenu.classList.remove('hidden');
+    pauseMenu.classList.add('fade-in');
+    stopBackgroundMusic();
+  }
+
+  function resumeGame() {
+    gamePaused = false;
+    pauseMenu.classList.add('hidden');
+    startBackgroundMusic();
+  }
+
+  // Update game state
+  function update() {
+    if (!gameRunning || gamePaused) return;
+
+    frameCount++;
+    gameTime++;
+    fpsCounter.update();
+
+    // Level progression and boss spawning
+    const newLevel = Math.floor(frameCount / 1800) + 1; // New level every 30 seconds
+    if (newLevel > currentLevel) {
+      currentLevel = newLevel;
+      // Increase difficulty
+      if (currentLevel % 3 === 0 && bosses.length === 0) {
+        spawnBoss();
+      }
+    }
+
+    // Increase difficulty over time
+    if (frameCount % 600 === 0) { // every 10 seconds at 60fps
+      spawnEnemy();
+      if (frameCount % 1800 === 0 && powerups.length > 1) {
+        powerups.pop(); // reduce powerups over time
+      }
+    }
+
+    // Player movement (keyboard + touch)
+    player.vx = 0;
+    player.vy = 0;
+    if (keys['ArrowUp'] || keys['w'] || touchControls.up) player.vy = -player.speed;
+    if (keys['ArrowDown'] || keys['s'] || touchControls.down) player.vy = player.speed;
+    if (keys['ArrowLeft'] || keys['a'] || touchControls.left) player.vx = -player.speed;
+    if (keys['ArrowRight'] || keys['d'] || touchControls.right) player.vx = player.speed;
+
+    player.update();
+
+    // Update enemies behavior based on player size
+    enemies.forEach(enemy => {
+      if (player.radius > enemy.radius) {
+        enemy.behavior = 'flee';
+      } else {
+        enemy.behavior = 'chase';
+      }
+      enemy.update(player);
+    });
+
+    // Update bosses
+    bosses.forEach(boss => {
+      boss.update(player);
+    });
+
+    // Magnetism powerup effect
+    if (player.powerup === 'magnetism') {
+      foods.forEach(food => {
+        const dx = player.x - food.x;
+        const dy = player.y - food.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) { // Magnetism range
+          const pullStrength = 0.2;
+          food.x += (dx / dist) * pullStrength * (100 - dist) / 100;
+          food.y += (dy / dist) * pullStrength * (100 - dist) / 100;
+        }
+      });
+    }
+
+    // Update projectiles
+    for (let i = projectiles.length - 1; i >= 0; i--) {
+      const proj = projectiles[i];
+      proj.update();
+      // Remove if out of bounds or life expired
+      if (proj.x < 0 || proj.x > canvas.width || proj.y < 0 || proj.y > canvas.height || proj.life <= 0) {
+        projectiles.splice(i, 1);
+        continue;
+      }
+      // Check collision with player
+      if (player.collidesWith(proj)) {
+        if (player.powerup !== 'shield') {
+          player.loseLife();
+          playSound(150, 0.3, 'triangle', 0.4);
+        }
+        projectiles.splice(i, 1);
+      }
+    }
+
+    // Check collisions with food
+    for (let i = foods.length - 1; i >= 0; i--) {
+      if (player.collidesWith(foods[i])) {
+        player.grow(0.5);
+        spawnParticles(foods[i].x, foods[i].y, foods[i].color);
+        foods.splice(i, 1);
+        spawnFood();
+        playSound(800, 0.1, 'square', 0.15);
+      }
+    }
+
+    // Check collisions with powerups
+    for (let i = powerups.length - 1; i >= 0; i--) {
+      if (player.collidesWith(powerups[i])) {
+        player.applyPowerup(powerups[i].type);
+        spawnParticles(powerups[i].x, powerups[i].y, powerups[i].color);
+        powerups.splice(i, 1);
+        spawnPowerup();
+      }
+    }
+
+    // Check collisions with enemies
+    for (let i = enemies.length - 1; i >= 0; i--) {
+      const enemy = enemies[i];
+      if (player.collidesWith(enemy)) {
+        if (player.powerup === 'shield') {
+          // Shield powerup: eat enemy regardless of size
+          player.grow(enemy.radius * 0.7);
+          player.score += Math.floor(enemy.radius * 10);
+          player.enemiesEaten++;
+          spawnParticles(enemy.x, enemy.y, enemy.color);
+          enemies.splice(i, 1);
+          spawnEnemy();
+          playSound(1000, 0.2, 'triangle', 0.3);
+        } else if (player.radius > enemy.radius) {
+          // Player eats enemy
+          player.grow(enemy.radius * 0.7);
+          player.score += Math.floor(enemy.radius * 10);
+          player.enemiesEaten++;
+          spawnParticles(enemy.x, enemy.y, enemy.color);
+          enemies.splice(i, 1);
+          spawnEnemy();
+          playSound(1000, 0.2, 'triangle', 0.3);
+        } else {
+          // Player loses a life
+          player.loseLife();
+          // Knockback player
+          const dx = player.x - enemy.x;
+          const dy = player.y - enemy.y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist > 0) {
+            player.x += (dx / dist) * 30;
+            player.y += (dy / dist) * 30;
+          }
+          playSound(150, 0.3, 'triangle', 0.4);
+        }
+      }
+    }
+
+    // Check collisions with bosses
+    for (let i = bosses.length - 1; i >= 0; i--) {
+      const boss = bosses[i];
+      if (player.collidesWith(boss)) {
+        if (player.powerup === 'shield' || player.radius > boss.radius) {
+          // Player can damage boss
+          if (boss.takeDamage()) {
+            // Boss defeated
+            player.score += 500;
+            player.bossesKilled++;
+            spawnParticles(boss.x, boss.y, boss.color);
+            bosses.splice(i, 1);
+            playSound(800, 0.5, 'triangle', 0.5);
+            
+            // Spawn rewards
+            for (let j = 0; j < 3; j++) {
+              spawnPowerup();
+            }
+          }
+        } else {
+          // Player takes damage
+          player.loseLife();
+        }
+      }
+    }
+
+    // Update particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      particles[i].update();
+      if (particles[i].alpha <= 0) {
+        particles.splice(i, 1);
+      }
+    }
+
+    // Check achievements
+    checkAchievements();
+  }
+
+  // Draw game state
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (!gameRunning) return;
+
+    // Draw food
+    foods.forEach(food => food.draw(ctx));
+
+    // Draw powerups
+    powerups.forEach(powerup => powerup.draw(ctx));
+
+    // Draw enemies
+    enemies.forEach(enemy => enemy.draw(ctx));
+
+    // Draw bosses
+    bosses.forEach(boss => boss.draw(ctx));
+
+    // Draw projectiles
+    projectiles.forEach(proj => {
+      ctx.save();
+      ctx.beginPath();
+      ctx.fillStyle = proj.color;
+      ctx.shadowColor = proj.color;
+      ctx.shadowBlur = 10;
+      ctx.arc(proj.x, proj.y, proj.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // Draw particles (limited by settings)
+    const particleLimit = gameSettings.particleCount === 'low' ? 20 : 
+                         gameSettings.particleCount === 'high' ? 100 : 50;
+    particles.slice(0, particleLimit).forEach(particle => particle.draw(ctx));
+
+    // Draw player
+    player.draw(ctx);
+
+    // Draw level indicator
+    ctx.save();
+    ctx.fillStyle = '#fff';
+    ctx.font = '20px Arial';
+    ctx.fillText(`Level: ${currentLevel}`, canvas.width - 120, 30);
+    ctx.restore();
+
+    // Draw FPS counter
+    fpsCounter.draw(ctx);
+  }
+
+  // Spawn particles for effects
+  function spawnParticles(x, y, color) {
+    const count = gameSettings.particleCount === 'low' ? 5 : 
+                  gameSettings.particleCount === 'high' ? 25 : 15;
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle(x, y, color));
+    }
+  }
+
+  // Game over handler
+  function gameOver() {
+    gameRunning = false;
+    gamePaused = false;
+    finalScoreDisplay.textContent = 'Your final score: ' + player.score;
+    updateLeaderboard(player.score);
+    renderLeaderboard(loadLeaderboard());
+    saveSettings(); // Save achievements and unlocked characters
+    hideAllMenus();
+    gameOverScreen.classList.remove('hidden');
+  }
+
+  // Game loop
+  function gameLoop() {
+    update();
+    draw();
+    if (gameRunning) {
+      requestAnimationFrame(gameLoop);
+    }
+  }
+
+  // Event listeners
+  window.addEventListener('keydown', e => {
+    keys[e.key] = true;
+    
+    // Pause with Escape key
+    if (e.key === 'Escape') {
+      if (gameRunning && !gamePaused) {
+        pauseGame();
+      } else if (gamePaused) {
+        resumeGame();
+      }
+    }
+  });
+  
+  window.addEventListener('keyup', e => {
+    keys[e.key] = false;
+  });
+
+  // Mobile touch controls
+  document.querySelectorAll('.mobile-btn').forEach(btn => {
+    btn.addEventListener('touchstart', e => {
+      e.preventDefault();
+      const key = btn.dataset.key;
+      
+      if (key === 'pause') {
+        if (gameRunning && !gamePaused) {
+          pauseGame();
+        } else if (gamePaused) {
+          resumeGame();
+        }
+      } else {
+        if (key === 'ArrowUp') touchControls.up = true;
+        if (key === 'ArrowDown') touchControls.down = true;
+        if (key === 'ArrowLeft') touchControls.left = true;
+        if (key === 'ArrowRight') touchControls.right = true;
+      }
+    });
+    
+    btn.addEventListener('touchend', e => {
+      e.preventDefault();
+      const key = btn.dataset.key;
+      
+      if (key !== 'pause') {
+        if (key === 'ArrowUp') touchControls.up = false;
+        if (key === 'ArrowDown') touchControls.down = false;
+        if (key === 'ArrowLeft') touchControls.left = false;
+        if (key === 'ArrowRight') touchControls.right = false;
+      }
+    });
+  });
+
+  // Menu button event listeners
+  startBtn.addEventListener('click', () => {
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    resetGame();
+    gameLoop();
+  });
+
+  settingsBtn.addEventListener('click', () => {
+    hideAllMenus();
+    settingsMenu.classList.remove('hidden');
+  });
+
+  document.getElementById('characterBtn').addEventListener('click', () => {
+    hideAllMenus();
+    document.getElementById('characterScreen').classList.remove('hidden');
+    renderCharacterSelection();
+  });
+
+  document.getElementById('achievementsBtn').addEventListener('click', () => {
+    hideAllMenus();
+    document.getElementById('achievementsScreen').classList.remove('hidden');
+    renderAchievements();
+  });
+
+  document.getElementById('selectCharacterBtn').addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  document.getElementById('backToMenuBtn').addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  document.getElementById('backFromAchievementsBtn').addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  document.getElementById('tutorialBtn').addEventListener('click', () => {
+    hideAllMenus();
+    document.getElementById('tutorialScreen').classList.remove('hidden');
+    document.getElementById('tutorialScreen').classList.add('fade-in');
+  });
+
+  document.getElementById('startTutorialBtn').addEventListener('click', () => {
+    // Start a guided tutorial mode (simplified version)
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    resetGame();
+    gameLoop();
+    // Could add tutorial overlays here
+  });
+
+  document.getElementById('backFromTutorialBtn').addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  restartBtn.addEventListener('click', () => {
+    resetGame();
+    gameLoop();
+  });
+
+  mainMenuBtn.addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  resumeBtn.addEventListener('click', () => {
+    resumeGame();
+  });
+
+  pauseSettingsBtn.addEventListener('click', () => {
+    pauseMenu.classList.add('hidden');
+    settingsMenu.classList.remove('hidden');
+  });
+
+  quitBtn.addEventListener('click', () => {
+    showMainMenu();
+  });
+
+  saveSettingsBtn.addEventListener('click', () => {
+    // Update settings from UI
+    gameSettings.soundVolume = parseInt(document.getElementById('soundVolume').value);
+    gameSettings.musicVolume = parseInt(document.getElementById('musicVolume').value);
+    gameSettings.showFPS = document.getElementById('showFPS').checked;
+    gameSettings.particleCount = document.getElementById('particleCount').value;
+    
+    saveSettings();
+    
+    // Update music volume if playing
+    if (musicPlaying && backgroundMusic) {
+      backgroundMusic.gainNode.gain.setValueAtTime((gameSettings.musicVolume / 100) * 0.1, audioCtx.currentTime);
+    }
+    
+    if (gamePaused) {
+      settingsMenu.classList.add('hidden');
+      pauseMenu.classList.remove('hidden');
+    } else {
+      hideAllMenus();
+      startScreen.classList.remove('hidden');
+    }
+  });
+
+  // Canvas resize handling
+  function resizeCanvas() {
+    const container = document.getElementById('gameContainer');
+    const rect = container.getBoundingClientRect();
+    
+    // Maintain aspect ratio
+    const aspectRatio = 900 / 600;
+    let newWidth = rect.width;
+    let newHeight = rect.width / aspectRatio;
+    
+    if (newHeight > rect.height) {
+      newHeight = rect.height;
+      newWidth = rect.height * aspectRatio;
+    }
+    
+    canvas.style.width = newWidth + 'px';
+    canvas.style.height = newHeight + 'px';
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('orientationchange', () => {
+    setTimeout(resizeCanvas, 100);
+  });
+
+  // Initialize
+  loadSettings();
+  renderLeaderboard(loadLeaderboard());
+  resizeCanvas();
+  showLoadingScreen();
+</script>
 </body>
 </html>
