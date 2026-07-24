@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **2%** (2/90 Days)
-- **Current Streak**: 🔥 **2 Days**
-- **Latest Published Lesson**: 📖 [Day 002: Variables and Assignment](Day002_Variables_and_Assignment.md)
-- **Up Next**: 🔜 **Day 003: Primitive Data Types**
-- **Last Updated**: 🕒 `2026-07-23 12:08 UTC`
+- **Overall Progress**: 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **3%** (3/90 Days)
+- **Current Streak**: 🔥 **3 Days**
+- **Latest Published Lesson**: 📖 [Day 003: Primitive Data Types](Day003_Primitive_Data_Types.md)
+- **Up Next**: 🔜 **Day 004: Input and Output Operations**
+- **Last Updated**: 🕒 `2026-07-24 03:30 UTC`
 
 ---
 
@@ -20,6 +20,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | :---: | :--- | :---: | :---: |
 | Day 001 | [Introduction to Python & Setup](Day001_Introduction_to_Python_&_Setup.md) | `Fundamentals` | Beginner |
 | Day 002 | [Variables and Assignment](Day002_Variables_and_Assignment.md) | `Fundamentals` | Beginner |
+| Day 003 | [Primitive Data Types](Day003_Primitive_Data_Types.md) | `Fundamentals` | Beginner |
 
 ---
 
