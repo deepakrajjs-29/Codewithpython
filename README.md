@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **7%** (6/90 Days)
-- **Current Streak**: 🔥 **6 Days**
-- **Latest Published Lesson**: 📖 [Day 006: String Manipulation & Methods](Day006_String_Manipulation_&_Methods.md)
-- **Up Next**: 🔜 **Day 007: Conditional Logic (if, elif, else)**
-- **Last Updated**: 🕒 `2026-07-25 07:55 UTC`
+- **Overall Progress**: 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **8%** (7/90 Days)
+- **Current Streak**: 🔥 **7 Days**
+- **Latest Published Lesson**: 📖 [Day 007: Conditional Logic (if, elif, else)](Day007_Conditional_Logic_(if,_elif,_else).md)
+- **Up Next**: 🔜 **Day 008: While Loops & Iteration**
+- **Last Updated**: 🕒 `2026-07-26 03:41 UTC`
 
 ---
 
@@ -24,6 +24,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 004 | [Input and Output Operations](Day004_Input_and_Output_Operations.md) | `Fundamentals` | Beginner |
 | Day 005 | [Operators in Python](Day005_Operators_in_Python.md) | `Fundamentals` | Beginner |
 | Day 006 | [String Manipulation & Methods](Day006_String_Manipulation_&_Methods.md) | `Strings` | Beginner |
+| Day 007 | [Conditional Logic (if, elif, else)](Day007_Conditional_Logic_(if,_elif,_else).md) | `Control Flow` | Beginner |
 
 ---
 
