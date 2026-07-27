@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **9%** (8/90 Days)
-- **Current Streak**: 🔥 **8 Days**
-- **Latest Published Lesson**: 📖 [Day 008: While Loops & Iteration](Day008_While_Loops_&_Iteration.md)
-- **Up Next**: 🔜 **Day 009: For Loops & Ranges**
-- **Last Updated**: 🕒 `2026-07-26 08:14 UTC`
+- **Overall Progress**: 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **10%** (9/90 Days)
+- **Current Streak**: 🔥 **9 Days**
+- **Latest Published Lesson**: 📖 [Day 009: For Loops & Ranges](Day009_For_Loops_&_Ranges.md)
+- **Up Next**: 🔜 **Day 010: Loop Control (break, continue, pass)**
+- **Last Updated**: 🕒 `2026-07-27 03:50 UTC`
 
 ---
 
@@ -26,6 +26,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 006 | [String Manipulation & Methods](Day006_String_Manipulation_&_Methods.md) | `Strings` | Beginner |
 | Day 007 | [Conditional Logic (if, elif, else)](Day007_Conditional_Logic_(if,_elif,_else).md) | `Control Flow` | Beginner |
 | Day 008 | [While Loops & Iteration](Day008_While_Loops_&_Iteration.md) | `Control Flow` | Beginner |
+| Day 009 | [For Loops & Ranges](Day009_For_Loops_&_Ranges.md) | `Control Flow` | Beginner |
 
 ---
 
