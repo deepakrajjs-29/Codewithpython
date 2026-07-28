@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **11%** (10/90 Days)
-- **Current Streak**: 🔥 **10 Days**
-- **Latest Published Lesson**: 📖 [Day 010: Loop Control (break, continue, pass)](Day010_Loop_Control_(break,_continue,_pass).md)
-- **Up Next**: 🔜 **Day 011: Python Lists - Basics & Operations**
-- **Last Updated**: 🕒 `2026-07-27 09:38 UTC`
+- **Overall Progress**: 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **12%** (11/90 Days)
+- **Current Streak**: 🔥 **11 Days**
+- **Latest Published Lesson**: 📖 [Day 011: Python Lists - Basics & Operations](Day011_Python_Lists_-_Basics_&_Operations.md)
+- **Up Next**: 🔜 **Day 012: Advanced List Methods & Sorting**
+- **Last Updated**: 🕒 `2026-07-28 03:21 UTC`
 
 ---
 
@@ -28,6 +28,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 008 | [While Loops & Iteration](Day008_While_Loops_&_Iteration.md) | `Control Flow` | Beginner |
 | Day 009 | [For Loops & Ranges](Day009_For_Loops_&_Ranges.md) | `Control Flow` | Beginner |
 | Day 010 | [Loop Control (break, continue, pass)](Day010_Loop_Control_(break,_continue,_pass).md) | `Control Flow` | Beginner |
+| Day 011 | [Python Lists - Basics & Operations](Day011_Python_Lists_-_Basics_&_Operations.md) | `Data Structures` | Beginner |
 
 ---
 
