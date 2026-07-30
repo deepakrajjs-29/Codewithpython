@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **16%** (14/90 Days)
-- **Current Streak**: 🔥 **14 Days**
-- **Latest Published Lesson**: 📖 [Day 014: Dictionaries - Key-Value Mapping](Day014_Dictionaries_-_Key-Value_Mapping.md)
-- **Up Next**: 🔜 **Day 015: Dictionary Operations & Methods**
-- **Last Updated**: 🕒 `2026-07-29 08:28 UTC`
+- **Overall Progress**: 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **17%** (15/90 Days)
+- **Current Streak**: 🔥 **15 Days**
+- **Latest Published Lesson**: 📖 [Day 015: Dictionary Operations & Methods](Day015_Dictionary_Operations_&_Methods.md)
+- **Up Next**: 🔜 **Day 016: Sets - Unique Collections**
+- **Last Updated**: 🕒 `2026-07-30 02:56 UTC`
 
 ---
 
@@ -32,6 +32,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 012 | [Advanced List Methods & Sorting](Day012_Advanced_List_Methods_&_Sorting.md) | `Data Structures` | Beginner |
 | Day 013 | [Tuples - Immutable Sequences](Day013_Tuples_-_Immutable_Sequences.md) | `Data Structures` | Beginner |
 | Day 014 | [Dictionaries - Key-Value Mapping](Day014_Dictionaries_-_Key-Value_Mapping.md) | `Data Structures` | Beginner |
+| Day 015 | [Dictionary Operations & Methods](Day015_Dictionary_Operations_&_Methods.md) | `Data Structures` | Beginner |
 
 ---
 
