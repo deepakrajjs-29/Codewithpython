@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **19%** (17/90 Days)
-- **Current Streak**: 🔥 **17 Days**
-- **Latest Published Lesson**: 📖 [Day 017: User-Defined Functions](Day017_User-Defined_Functions.md)
-- **Up Next**: 🔜 **Day 018: Function Arguments (*args and **kwargs)**
-- **Last Updated**: 🕒 `2026-07-31 03:39 UTC`
+- **Overall Progress**: 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **20%** (18/90 Days)
+- **Current Streak**: 🔥 **18 Days**
+- **Latest Published Lesson**: 📖 [Day 018: Function Arguments (*args and **kwargs)](Day018_Function_Arguments_(*args_and_**kwargs).md)
+- **Up Next**: 🔜 **Day 019: Variable Scope & Namespaces**
+- **Last Updated**: 🕒 `2026-07-31 08:39 UTC`
 
 ---
 
@@ -35,6 +35,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 015 | [Dictionary Operations & Methods](Day015_Dictionary_Operations_&_Methods.md) | `Data Structures` | Beginner |
 | Day 016 | [Sets - Unique Collections](Day016_Sets_-_Unique_Collections.md) | `Data Structures` | Beginner |
 | Day 017 | [User-Defined Functions](Day017_User-Defined_Functions.md) | `Functions` | Beginner |
+| Day 018 | [Function Arguments (*args and **kwargs)](Day018_Function_Arguments_(*args_and_**kwargs).md) | `Functions` | Intermediate |
 
 ---
 
