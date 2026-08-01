@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **21%** (19/90 Days)
-- **Current Streak**: 🔥 **19 Days**
-- **Latest Published Lesson**: 📖 [Day 019: Variable Scope & Namespaces](Day019_Variable_Scope_&_Namespaces.md)
-- **Up Next**: 🔜 **Day 020: Lambda (Anonymous) Functions**
-- **Last Updated**: 🕒 `2026-08-01 03:38 UTC`
+- **Overall Progress**: 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **22%** (20/90 Days)
+- **Current Streak**: 🔥 **20 Days**
+- **Latest Published Lesson**: 📖 [Day 020: Lambda (Anonymous) Functions](Day020_Lambda_(Anonymous)_Functions.md)
+- **Up Next**: 🔜 **Day 021: Higher-Order Functions (map, filter, reduce)**
+- **Last Updated**: 🕒 `2026-08-01 08:09 UTC`
 
 ---
 
@@ -37,6 +37,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 017 | [User-Defined Functions](Day017_User-Defined_Functions.md) | `Functions` | Beginner |
 | Day 018 | [Function Arguments (*args and **kwargs)](Day018_Function_Arguments_(*args_and_**kwargs).md) | `Functions` | Intermediate |
 | Day 019 | [Variable Scope & Namespaces](Day019_Variable_Scope_&_Namespaces.md) | `Functions` | Intermediate |
+| Day 020 | [Lambda (Anonymous) Functions](Day020_Lambda_(Anonymous)_Functions.md) | `Functions` | Intermediate |
 
 ---
 
