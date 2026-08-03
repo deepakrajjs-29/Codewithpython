@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **26%** (23/90 Days)
-- **Current Streak**: 🔥 **23 Days**
-- **Latest Published Lesson**: 📖 [Day 023: Dictionary Comprehensions](Day023_Dictionary_Comprehensions.md)
-- **Up Next**: 🔜 **Day 024: Modules and standard import System**
-- **Last Updated**: 🕒 `2026-08-03 03:40 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **27%** (24/90 Days)
+- **Current Streak**: 🔥 **24 Days**
+- **Latest Published Lesson**: 📖 [Day 024: Modules and standard import System](Day024_Modules_and_standard_import_System.md)
+- **Up Next**: 🔜 **Day 025: Packages and __init__.py**
+- **Last Updated**: 🕒 `2026-08-03 09:31 UTC`
 
 ---
 
@@ -41,6 +41,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 021 | [Higher-Order Functions (map, filter, reduce)](Day021_Higher-Order_Functions_(map,_filter,_reduce).md) | `Functional Programming` | Intermediate |
 | Day 022 | [List & Set Comprehensions](Day022_List_&_Set_Comprehensions.md) | `Pythonic Code` | Intermediate |
 | Day 023 | [Dictionary Comprehensions](Day023_Dictionary_Comprehensions.md) | `Pythonic Code` | Intermediate |
+| Day 024 | [Modules and standard import System](Day024_Modules_and_standard_import_System.md) | `Modular Python` | Intermediate |
 
 ---
 
