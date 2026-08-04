@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **28%** (25/90 Days)
-- **Current Streak**: 🔥 **25 Days**
-- **Latest Published Lesson**: 📖 [Day 025: Packages and __init__.py](Day025_Packages_and___init__.py.md)
-- **Up Next**: 🔜 **Day 026: File I/O - Reading Text Files**
-- **Last Updated**: 🕒 `2026-08-04 03:25 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **29%** (26/90 Days)
+- **Current Streak**: 🔥 **26 Days**
+- **Latest Published Lesson**: 📖 [Day 026: File I/O - Reading Text Files](Day026_File_I_O_-_Reading_Text_Files.md)
+- **Up Next**: 🔜 **Day 027: File I/O - Writing and Appending Files**
+- **Last Updated**: 🕒 `2026-08-04 08:26 UTC`
 
 ---
 
@@ -43,6 +43,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 023 | [Dictionary Comprehensions](Day023_Dictionary_Comprehensions.md) | `Pythonic Code` | Intermediate |
 | Day 024 | [Modules and standard import System](Day024_Modules_and_standard_import_System.md) | `Modular Python` | Intermediate |
 | Day 025 | [Packages and __init__.py](Day025_Packages_and___init__.py.md) | `Modular Python` | Intermediate |
+| Day 026 | [File I/O - Reading Text Files](Day026_File_I_O_-_Reading_Text_Files.md) | `File Handling` | Intermediate |
 
 ---
 
