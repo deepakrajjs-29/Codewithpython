@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **30%** (27/90 Days)
-- **Current Streak**: 🔥 **27 Days**
-- **Latest Published Lesson**: 📖 [Day 027: File I/O - Writing and Appending Files](Day027_File_I_O_-_Writing_and_Appending_Files.md)
-- **Up Next**: 🔜 **Day 028: Exception Handling (try, except, else, finally)**
-- **Last Updated**: 🕒 `2026-08-05 03:20 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **31%** (28/90 Days)
+- **Current Streak**: 🔥 **28 Days**
+- **Latest Published Lesson**: 📖 [Day 028: Exception Handling (try, except, else, finally)](Day028_Exception_Handling_(try,_except,_else,_finally).md)
+- **Up Next**: 🔜 **Day 029: Raising Exceptions & Custom Error Classes**
+- **Last Updated**: 🕒 `2026-08-05 08:25 UTC`
 
 ---
 
@@ -45,6 +45,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 025 | [Packages and __init__.py](Day025_Packages_and___init__.py.md) | `Modular Python` | Intermediate |
 | Day 026 | [File I/O - Reading Text Files](Day026_File_I_O_-_Reading_Text_Files.md) | `File Handling` | Intermediate |
 | Day 027 | [File I/O - Writing and Appending Files](Day027_File_I_O_-_Writing_and_Appending_Files.md) | `File Handling` | Intermediate |
+| Day 028 | [Exception Handling (try, except, else, finally)](Day028_Exception_Handling_(try,_except,_else,_finally).md) | `Error Handling` | Intermediate |
 
 ---
 
