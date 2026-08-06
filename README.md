@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **32%** (29/90 Days)
-- **Current Streak**: 🔥 **29 Days**
-- **Latest Published Lesson**: 📖 [Day 029: Raising Exceptions & Custom Error Classes](Day029_Raising_Exceptions_&_Custom_Error_Classes.md)
-- **Up Next**: 🔜 **Day 030: Milestone Project 1: CLI Task Manager**
-- **Last Updated**: 🕒 `2026-08-06 03:22 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **33%** (30/90 Days)
+- **Current Streak**: 🔥 **30 Days**
+- **Latest Published Lesson**: 📖 [Day 030: Milestone Project 1: CLI Task Manager](Day030_Milestone_Project_1:_CLI_Task_Manager.md)
+- **Up Next**: 🔜 **Day 031: OOP Basics - Classes and Objects**
+- **Last Updated**: 🕒 `2026-08-06 08:23 UTC`
 
 ---
 
@@ -47,6 +47,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 027 | [File I/O - Writing and Appending Files](Day027_File_I_O_-_Writing_and_Appending_Files.md) | `File Handling` | Intermediate |
 | Day 028 | [Exception Handling (try, except, else, finally)](Day028_Exception_Handling_(try,_except,_else,_finally).md) | `Error Handling` | Intermediate |
 | Day 029 | [Raising Exceptions & Custom Error Classes](Day029_Raising_Exceptions_&_Custom_Error_Classes.md) | `Error Handling` | Intermediate |
+| Day 030 | [Milestone Project 1: CLI Task Manager](Day030_Milestone_Project_1:_CLI_Task_Manager.md) | `Project` | Intermediate |
 
 ---
 
