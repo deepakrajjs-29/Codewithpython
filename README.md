@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **34%** (31/90 Days)
-- **Current Streak**: 🔥 **31 Days**
-- **Latest Published Lesson**: 📖 [Day 031: OOP Basics - Classes and Objects](Day031_OOP_Basics_-_Classes_and_Objects.md)
-- **Up Next**: 🔜 **Day 032: Constructors and __init__ Method**
-- **Last Updated**: 🕒 `2026-08-07 03:10 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **36%** (32/90 Days)
+- **Current Streak**: 🔥 **32 Days**
+- **Latest Published Lesson**: 📖 [Day 032: Constructors and __init__ Method](Day032_Constructors_and___init___Method.md)
+- **Up Next**: 🔜 **Day 033: Instance Methods vs Class Methods vs Static Methods**
+- **Last Updated**: 🕒 `2026-08-07 07:04 UTC`
 
 ---
 
@@ -49,6 +49,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 029 | [Raising Exceptions & Custom Error Classes](Day029_Raising_Exceptions_&_Custom_Error_Classes.md) | `Error Handling` | Intermediate |
 | Day 030 | [Milestone Project 1: CLI Task Manager](Day030_Milestone_Project_1:_CLI_Task_Manager.md) | `Project` | Intermediate |
 | Day 031 | [OOP Basics - Classes and Objects](Day031_OOP_Basics_-_Classes_and_Objects.md) | `OOP` | Intermediate |
+| Day 032 | [Constructors and __init__ Method](Day032_Constructors_and___init___Method.md) | `OOP` | Intermediate |
 
 ---
 
