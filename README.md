@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ **36%** (32/90 Days)
-- **Current Streak**: 🔥 **32 Days**
-- **Latest Published Lesson**: 📖 [Day 032: Constructors and __init__ Method](Day032_Constructors_and___init___Method.md)
-- **Up Next**: 🔜 **Day 033: Instance Methods vs Class Methods vs Static Methods**
-- **Last Updated**: 🕒 `2026-08-07 07:04 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ **37%** (33/90 Days)
+- **Current Streak**: 🔥 **33 Days**
+- **Latest Published Lesson**: 📖 [Day 033: Instance Methods vs Class Methods vs Static Methods](Day033_Instance_Methods_vs_Class_Methods_vs_Static_Methods.md)
+- **Up Next**: 🔜 **Day 034: Encapsulation & Access Modifiers**
+- **Last Updated**: 🕒 `2026-08-08 02:06 UTC`
 
 ---
 
@@ -50,6 +50,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 030 | [Milestone Project 1: CLI Task Manager](Day030_Milestone_Project_1:_CLI_Task_Manager.md) | `Project` | Intermediate |
 | Day 031 | [OOP Basics - Classes and Objects](Day031_OOP_Basics_-_Classes_and_Objects.md) | `OOP` | Intermediate |
 | Day 032 | [Constructors and __init__ Method](Day032_Constructors_and___init___Method.md) | `OOP` | Intermediate |
+| Day 033 | [Instance Methods vs Class Methods vs Static Methods](Day033_Instance_Methods_vs_Class_Methods_vs_Static_Methods.md) | `OOP` | Intermediate |
 
 ---
 
