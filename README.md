@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ **39%** (35/90 Days)
-- **Current Streak**: 🔥 **35 Days**
-- **Latest Published Lesson**: 📖 [Day 035: Properties and @property Decorator](Day035_Properties_and_@property_Decorator.md)
-- **Up Next**: 🔜 **Day 036: Single Inheritance**
-- **Last Updated**: 🕒 `2026-08-09 02:18 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ **40%** (36/90 Days)
+- **Current Streak**: 🔥 **36 Days**
+- **Latest Published Lesson**: 📖 [Day 036: Single Inheritance](Day036_Single_Inheritance.md)
+- **Up Next**: 🔜 **Day 037: Method Overriding & Polymorphism**
+- **Last Updated**: 🕒 `2026-08-09 06:43 UTC`
 
 ---
 
@@ -53,6 +53,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 033 | [Instance Methods vs Class Methods vs Static Methods](Day033_Instance_Methods_vs_Class_Methods_vs_Static_Methods.md) | `OOP` | Intermediate |
 | Day 034 | [Encapsulation & Access Modifiers](Day034_Encapsulation_&_Access_Modifiers.md) | `OOP` | Intermediate |
 | Day 035 | [Properties and @property Decorator](Day035_Properties_and_@property_Decorator.md) | `OOP` | Intermediate |
+| Day 036 | [Single Inheritance](Day036_Single_Inheritance.md) | `OOP` | Intermediate |
 
 ---
 
