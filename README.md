@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ **40%** (36/90 Days)
-- **Current Streak**: 🔥 **36 Days**
-- **Latest Published Lesson**: 📖 [Day 036: Single Inheritance](Day036_Single_Inheritance.md)
-- **Up Next**: 🔜 **Day 037: Method Overriding & Polymorphism**
-- **Last Updated**: 🕒 `2026-08-09 06:43 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ **41%** (37/90 Days)
+- **Current Streak**: 🔥 **37 Days**
+- **Latest Published Lesson**: 📖 [Day 037: Method Overriding & Polymorphism](Day037_Method_Overriding_&_Polymorphism.md)
+- **Up Next**: 🔜 **Day 038: Multiple Inheritance & Method Resolution Order (MRO)**
+- **Last Updated**: 🕒 `2026-08-10 02:23 UTC`
 
 ---
 
@@ -54,6 +54,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 034 | [Encapsulation & Access Modifiers](Day034_Encapsulation_&_Access_Modifiers.md) | `OOP` | Intermediate |
 | Day 035 | [Properties and @property Decorator](Day035_Properties_and_@property_Decorator.md) | `OOP` | Intermediate |
 | Day 036 | [Single Inheritance](Day036_Single_Inheritance.md) | `OOP` | Intermediate |
+| Day 037 | [Method Overriding & Polymorphism](Day037_Method_Overriding_&_Polymorphism.md) | `OOP` | Intermediate |
 
 ---
 
