@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **47%** (42/90 Days)
-- **Current Streak**: 🔥 **42 Days**
-- **Latest Published Lesson**: 📖 [Day 042: Data Classes (dataclasses module)](Day042_Data_Classes_(dataclasses_module).md)
-- **Up Next**: 🔜 **Day 043: Iterators and the Iteration Protocol**
-- **Last Updated**: 🕒 `2026-08-12 07:14 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **48%** (43/90 Days)
+- **Current Streak**: 🔥 **43 Days**
+- **Latest Published Lesson**: 📖 [Day 043: Iterators and the Iteration Protocol](Day043_Iterators_and_the_Iteration_Protocol.md)
+- **Up Next**: 🔜 **Day 044: Generators & yield Keyword**
+- **Last Updated**: 🕒 `2026-08-13 02:33 UTC`
 
 ---
 
@@ -60,6 +60,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 040 | [Dunder (Magic) Methods - Part 1](Day040_Dunder_(Magic)_Methods_-_Part_1.md) | `OOP` | Intermediate |
 | Day 041 | [Dunder (Magic) Methods - Part 2](Day041_Dunder_(Magic)_Methods_-_Part_2.md) | `OOP` | Intermediate |
 | Day 042 | [Data Classes (dataclasses module)](Day042_Data_Classes_(dataclasses_module).md) | `OOP` | Intermediate |
+| Day 043 | [Iterators and the Iteration Protocol](Day043_Iterators_and_the_Iteration_Protocol.md) | `Advanced Topics` | Intermediate |
 
 ---
 
