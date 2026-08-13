@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **48%** (43/90 Days)
-- **Current Streak**: 🔥 **43 Days**
-- **Latest Published Lesson**: 📖 [Day 043: Iterators and the Iteration Protocol](Day043_Iterators_and_the_Iteration_Protocol.md)
-- **Up Next**: 🔜 **Day 044: Generators & yield Keyword**
-- **Last Updated**: 🕒 `2026-08-13 02:33 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **49%** (44/90 Days)
+- **Current Streak**: 🔥 **44 Days**
+- **Latest Published Lesson**: 📖 [Day 044: Generators & yield Keyword](Day044_Generators_&_yield_Keyword.md)
+- **Up Next**: 🔜 **Day 045: Advanced Generator Concepts (send, throw, close)**
+- **Last Updated**: 🕒 `2026-08-13 07:17 UTC`
 
 ---
 
@@ -61,6 +61,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 041 | [Dunder (Magic) Methods - Part 2](Day041_Dunder_(Magic)_Methods_-_Part_2.md) | `OOP` | Intermediate |
 | Day 042 | [Data Classes (dataclasses module)](Day042_Data_Classes_(dataclasses_module).md) | `OOP` | Intermediate |
 | Day 043 | [Iterators and the Iteration Protocol](Day043_Iterators_and_the_Iteration_Protocol.md) | `Advanced Topics` | Intermediate |
+| Day 044 | [Generators & yield Keyword](Day044_Generators_&_yield_Keyword.md) | `Advanced Topics` | Intermediate |
 
 ---
 
