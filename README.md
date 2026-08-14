@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **49%** (44/90 Days)
-- **Current Streak**: 🔥 **44 Days**
-- **Latest Published Lesson**: 📖 [Day 044: Generators & yield Keyword](Day044_Generators_&_yield_Keyword.md)
-- **Up Next**: 🔜 **Day 045: Advanced Generator Concepts (send, throw, close)**
-- **Last Updated**: 🕒 `2026-08-13 07:17 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **50%** (45/90 Days)
+- **Current Streak**: 🔥 **45 Days**
+- **Latest Published Lesson**: 📖 [Day 045: Advanced Generator Concepts (send, throw, close)](Day045_Advanced_Generator_Concepts_(send,_throw,_close).md)
+- **Up Next**: 🔜 **Day 046: Decorators - Basics & Function Wrappers**
+- **Last Updated**: 🕒 `2026-08-14 02:32 UTC`
 
 ---
 
@@ -62,6 +62,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 042 | [Data Classes (dataclasses module)](Day042_Data_Classes_(dataclasses_module).md) | `OOP` | Intermediate |
 | Day 043 | [Iterators and the Iteration Protocol](Day043_Iterators_and_the_Iteration_Protocol.md) | `Advanced Topics` | Intermediate |
 | Day 044 | [Generators & yield Keyword](Day044_Generators_&_yield_Keyword.md) | `Advanced Topics` | Intermediate |
+| Day 045 | [Advanced Generator Concepts (send, throw, close)](Day045_Advanced_Generator_Concepts_(send,_throw,_close).md) | `Advanced Topics` | Intermediate |
 
 ---
 
