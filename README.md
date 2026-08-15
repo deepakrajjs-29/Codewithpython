@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **52%** (47/90 Days)
-- **Current Streak**: 🔥 **47 Days**
-- **Latest Published Lesson**: 📖 [Day 047: Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md)
-- **Up Next**: 🔜 **Day 048: Context Managers & 'with' Statement**
-- **Last Updated**: 🕒 `2026-08-15 01:41 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **53%** (48/90 Days)
+- **Current Streak**: 🔥 **48 Days**
+- **Latest Published Lesson**: 📖 [Day 048: Context Managers & 'with' Statement](Day048_Context_Managers_&_'with'_Statement.md)
+- **Up Next**: 🔜 **Day 049: Type Hints & Static Type Checking**
+- **Last Updated**: 🕒 `2026-08-15 06:25 UTC`
 
 ---
 
@@ -65,6 +65,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 045 | [Advanced Generator Concepts (send, throw, close)](Day045_Advanced_Generator_Concepts_(send,_throw,_close).md) | `Advanced Topics` | Intermediate |
 | Day 046 | [Decorators - Basics & Function Wrappers](Day046_Decorators_-_Basics_&_Function_Wrappers.md) | `Advanced Topics` | Intermediate |
 | Day 047 | [Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md) | `Advanced Topics` | Intermediate |
+| Day 048 | [Context Managers & 'with' Statement](Day048_Context_Managers_&_'with'_Statement.md) | `Advanced Topics` | Intermediate |
 
 ---
 
