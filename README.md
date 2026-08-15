@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **51%** (46/90 Days)
-- **Current Streak**: 🔥 **46 Days**
-- **Latest Published Lesson**: 📖 [Day 046: Decorators - Basics & Function Wrappers](Day046_Decorators_-_Basics_&_Function_Wrappers.md)
-- **Up Next**: 🔜 **Day 047: Decorators with Arguments & Class Decorators**
-- **Last Updated**: 🕒 `2026-08-14 07:15 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **52%** (47/90 Days)
+- **Current Streak**: 🔥 **47 Days**
+- **Latest Published Lesson**: 📖 [Day 047: Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md)
+- **Up Next**: 🔜 **Day 048: Context Managers & 'with' Statement**
+- **Last Updated**: 🕒 `2026-08-15 01:41 UTC`
 
 ---
 
@@ -64,6 +64,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 044 | [Generators & yield Keyword](Day044_Generators_&_yield_Keyword.md) | `Advanced Topics` | Intermediate |
 | Day 045 | [Advanced Generator Concepts (send, throw, close)](Day045_Advanced_Generator_Concepts_(send,_throw,_close).md) | `Advanced Topics` | Intermediate |
 | Day 046 | [Decorators - Basics & Function Wrappers](Day046_Decorators_-_Basics_&_Function_Wrappers.md) | `Advanced Topics` | Intermediate |
+| Day 047 | [Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md) | `Advanced Topics` | Intermediate |
 
 ---
 
