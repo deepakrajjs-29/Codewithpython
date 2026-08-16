@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **53%** (48/90 Days)
-- **Current Streak**: 🔥 **48 Days**
-- **Latest Published Lesson**: 📖 [Day 048: Context Managers & 'with' Statement](Day048_Context_Managers_&_'with'_Statement.md)
-- **Up Next**: 🔜 **Day 049: Type Hints & Static Type Checking**
-- **Last Updated**: 🕒 `2026-08-15 06:25 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **54%** (49/90 Days)
+- **Current Streak**: 🔥 **49 Days**
+- **Latest Published Lesson**: 📖 [Day 049: Type Hints & Static Type Checking](Day049_Type_Hints_&_Static_Type_Checking.md)
+- **Up Next**: 🔜 **Day 050: Milestone Project 2: OOP Banking System**
+- **Last Updated**: 🕒 `2026-08-16 01:48 UTC`
 
 ---
 
@@ -66,6 +66,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 046 | [Decorators - Basics & Function Wrappers](Day046_Decorators_-_Basics_&_Function_Wrappers.md) | `Advanced Topics` | Intermediate |
 | Day 047 | [Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md) | `Advanced Topics` | Intermediate |
 | Day 048 | [Context Managers & 'with' Statement](Day048_Context_Managers_&_'with'_Statement.md) | `Advanced Topics` | Intermediate |
+| Day 049 | [Type Hints & Static Type Checking](Day049_Type_Hints_&_Static_Type_Checking.md) | `Best Practices` | Intermediate |
 
 ---
 
