@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **54%** (49/90 Days)
-- **Current Streak**: 🔥 **49 Days**
-- **Latest Published Lesson**: 📖 [Day 049: Type Hints & Static Type Checking](Day049_Type_Hints_&_Static_Type_Checking.md)
-- **Up Next**: 🔜 **Day 050: Milestone Project 2: OOP Banking System**
-- **Last Updated**: 🕒 `2026-08-16 01:48 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ **56%** (50/90 Days)
+- **Current Streak**: 🔥 **50 Days**
+- **Latest Published Lesson**: 📖 [Day 050: Milestone Project 2: OOP Banking System](Day050_Milestone_Project_2:_OOP_Banking_System.md)
+- **Up Next**: 🔜 **Day 051: Working with Dates and Times (datetime)**
+- **Last Updated**: 🕒 `2026-08-16 06:27 UTC`
 
 ---
 
@@ -67,6 +67,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 047 | [Decorators with Arguments & Class Decorators](Day047_Decorators_with_Arguments_&_Class_Decorators.md) | `Advanced Topics` | Intermediate |
 | Day 048 | [Context Managers & 'with' Statement](Day048_Context_Managers_&_'with'_Statement.md) | `Advanced Topics` | Intermediate |
 | Day 049 | [Type Hints & Static Type Checking](Day049_Type_Hints_&_Static_Type_Checking.md) | `Best Practices` | Intermediate |
+| Day 050 | [Milestone Project 2: OOP Banking System](Day050_Milestone_Project_2:_OOP_Banking_System.md) | `Project` | Intermediate |
 
 ---
 
