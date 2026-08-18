@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ **59%** (53/90 Days)
-- **Current Streak**: 🔥 **53 Days**
-- **Latest Published Lesson**: 📖 [Day 053: CSV File Processing (csv module)](Day053_CSV_File_Processing_(csv_module).md)
-- **Up Next**: 🔜 **Day 054: Regular Expressions (re module) - Part 1**
-- **Last Updated**: 🕒 `2026-08-18 01:41 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ **60%** (54/90 Days)
+- **Current Streak**: 🔥 **54 Days**
+- **Latest Published Lesson**: 📖 [Day 054: Regular Expressions (re module) - Part 1](Day054_Regular_Expressions_(re_module)_-_Part_1.md)
+- **Up Next**: 🔜 **Day 055: Regular Expressions (re module) - Part 2**
+- **Last Updated**: 🕒 `2026-08-18 06:31 UTC`
 
 ---
 
@@ -71,6 +71,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 051 | [Working with Dates and Times (datetime)](Day051_Working_with_Dates_and_Times_(datetime).md) | `Standard Library` | Intermediate |
 | Day 052 | [JSON Serialization and Parsing](Day052_JSON_Serialization_and_Parsing.md) | `Standard Library` | Intermediate |
 | Day 053 | [CSV File Processing (csv module)](Day053_CSV_File_Processing_(csv_module).md) | `Standard Library` | Intermediate |
+| Day 054 | [Regular Expressions (re module) - Part 1](Day054_Regular_Expressions_(re_module)_-_Part_1.md) | `Text Processing` | Intermediate |
 
 ---
 
