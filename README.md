@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ **58%** (52/90 Days)
-- **Current Streak**: 🔥 **52 Days**
-- **Latest Published Lesson**: 📖 [Day 052: JSON Serialization and Parsing](Day052_JSON_Serialization_and_Parsing.md)
-- **Up Next**: 🔜 **Day 053: CSV File Processing (csv module)**
-- **Last Updated**: 🕒 `2026-08-17 06:39 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ **59%** (53/90 Days)
+- **Current Streak**: 🔥 **53 Days**
+- **Latest Published Lesson**: 📖 [Day 053: CSV File Processing (csv module)](Day053_CSV_File_Processing_(csv_module).md)
+- **Up Next**: 🔜 **Day 054: Regular Expressions (re module) - Part 1**
+- **Last Updated**: 🕒 `2026-08-18 01:41 UTC`
 
 ---
 
@@ -70,6 +70,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 050 | [Milestone Project 2: OOP Banking System](Day050_Milestone_Project_2:_OOP_Banking_System.md) | `Project` | Intermediate |
 | Day 051 | [Working with Dates and Times (datetime)](Day051_Working_with_Dates_and_Times_(datetime).md) | `Standard Library` | Intermediate |
 | Day 052 | [JSON Serialization and Parsing](Day052_JSON_Serialization_and_Parsing.md) | `Standard Library` | Intermediate |
+| Day 053 | [CSV File Processing (csv module)](Day053_CSV_File_Processing_(csv_module).md) | `Standard Library` | Intermediate |
 
 ---
 
