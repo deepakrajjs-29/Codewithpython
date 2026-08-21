@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ **64%** (58/90 Days)
-- **Current Streak**: 🔥 **58 Days**
-- **Latest Published Lesson**: 📖 [Day 058: HTTP Requests with requests Library](Day058_HTTP_Requests_with_requests_Library.md)
-- **Up Next**: 🔜 **Day 059: Relational Databases with SQLite (sqlite3)**
-- **Last Updated**: 🕒 `2026-08-20 06:34 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ **66%** (59/90 Days)
+- **Current Streak**: 🔥 **59 Days**
+- **Latest Published Lesson**: 📖 [Day 059: Relational Databases with SQLite (sqlite3)](Day059_Relational_Databases_with_SQLite_(sqlite3).md)
+- **Up Next**: 🔜 **Day 060: SQLite Advanced Operations & Transactions**
+- **Last Updated**: 🕒 `2026-08-21 01:48 UTC`
 
 ---
 
@@ -76,6 +76,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 056 | [Python Logging System (logging module)](Day056_Python_Logging_System_(logging_module).md) | `Standard Library` | Intermediate |
 | Day 057 | [Path Manipulation with pathlib Module](Day057_Path_Manipulation_with_pathlib_Module.md) | `Standard Library` | Intermediate |
 | Day 058 | [HTTP Requests with requests Library](Day058_HTTP_Requests_with_requests_Library.md) | `Networking` | Intermediate |
+| Day 059 | [Relational Databases with SQLite (sqlite3)](Day059_Relational_Databases_with_SQLite_(sqlite3).md) | `Databases` | Intermediate |
 
 ---
 
