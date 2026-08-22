@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ **67%** (60/90 Days)
-- **Current Streak**: 🔥 **60 Days**
-- **Latest Published Lesson**: 📖 [Day 060: SQLite Advanced Operations & Transactions](Day060_SQLite_Advanced_Operations_&_Transactions.md)
-- **Up Next**: 🔜 **Day 061: Concurrency - Multithreading (threading)**
-- **Last Updated**: 🕒 `2026-08-21 06:34 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ **68%** (61/90 Days)
+- **Current Streak**: 🔥 **61 Days**
+- **Latest Published Lesson**: 📖 [Day 061: Concurrency - Multithreading (threading)](Day061_Concurrency_-_Multithreading_(threading).md)
+- **Up Next**: 🔜 **Day 062: Concurrency - Multiprocessing (multiprocessing)**
+- **Last Updated**: 🕒 `2026-08-22 01:40 UTC`
 
 ---
 
@@ -78,6 +78,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 058 | [HTTP Requests with requests Library](Day058_HTTP_Requests_with_requests_Library.md) | `Networking` | Intermediate |
 | Day 059 | [Relational Databases with SQLite (sqlite3)](Day059_Relational_Databases_with_SQLite_(sqlite3).md) | `Databases` | Intermediate |
 | Day 060 | [SQLite Advanced Operations & Transactions](Day060_SQLite_Advanced_Operations_&_Transactions.md) | `Databases` | Intermediate |
+| Day 061 | [Concurrency - Multithreading (threading)](Day061_Concurrency_-_Multithreading_(threading).md) | `Concurrency` | Advanced |
 
 ---
 
