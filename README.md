@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **71%** (64/90 Days)
-- **Current Streak**: 🔥 **64 Days**
-- **Latest Published Lesson**: 📖 [Day 064: Asynchronous Programming (asyncio) - Part 2](Day064_Asynchronous_Programming_(asyncio)_-_Part_2.md)
-- **Up Next**: 🔜 **Day 065: Functional Tools (functools & itertools)**
-- **Last Updated**: 🕒 `2026-08-23 06:29 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **72%** (65/90 Days)
+- **Current Streak**: 🔥 **65 Days**
+- **Latest Published Lesson**: 📖 [Day 065: Functional Tools (functools & itertools)](Day065_Functional_Tools_(functools_&_itertools).md)
+- **Up Next**: 🔜 **Day 066: Virtual Environments & Package Management (pip)**
+- **Last Updated**: 🕒 `2026-08-24 01:48 UTC`
 
 ---
 
@@ -82,6 +82,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 062 | [Concurrency - Multiprocessing (multiprocessing)](Day062_Concurrency_-_Multiprocessing_(multiprocessing).md) | `Concurrency` | Advanced |
 | Day 063 | [Asynchronous Programming (asyncio) - Part 1](Day063_Asynchronous_Programming_(asyncio)_-_Part_1.md) | `Async Python` | Advanced |
 | Day 064 | [Asynchronous Programming (asyncio) - Part 2](Day064_Asynchronous_Programming_(asyncio)_-_Part_2.md) | `Async Python` | Advanced |
+| Day 065 | [Functional Tools (functools & itertools)](Day065_Functional_Tools_(functools_&_itertools).md) | `Standard Library` | Advanced |
 
 ---
 
