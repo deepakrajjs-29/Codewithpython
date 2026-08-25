@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **74%** (67/90 Days)
-- **Current Streak**: 🔥 **67 Days**
-- **Latest Published Lesson**: 📖 [Day 067: Unit Testing with unittest Framework](Day067_Unit_Testing_with_unittest_Framework.md)
-- **Up Next**: 🔜 **Day 068: Modern Testing with pytest**
-- **Last Updated**: 🕒 `2026-08-25 01:42 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **76%** (68/90 Days)
+- **Current Streak**: 🔥 **68 Days**
+- **Latest Published Lesson**: 📖 [Day 068: Modern Testing with pytest](Day068_Modern_Testing_with_pytest.md)
+- **Up Next**: 🔜 **Day 069: Mocking & Test Doubles (unittest.mock)**
+- **Last Updated**: 🕒 `2026-08-25 06:36 UTC`
 
 ---
 
@@ -85,6 +85,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 065 | [Functional Tools (functools & itertools)](Day065_Functional_Tools_(functools_&_itertools).md) | `Standard Library` | Advanced |
 | Day 066 | [Virtual Environments & Package Management (pip)](Day066_Virtual_Environments_&_Package_Management_(pip).md) | `DevOps & Tooling` | Intermediate |
 | Day 067 | [Unit Testing with unittest Framework](Day067_Unit_Testing_with_unittest_Framework.md) | `Testing` | Intermediate |
+| Day 068 | [Modern Testing with pytest](Day068_Modern_Testing_with_pytest.md) | `Testing` | Intermediate |
 
 ---
 
