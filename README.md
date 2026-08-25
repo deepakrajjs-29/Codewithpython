@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **73%** (66/90 Days)
-- **Current Streak**: 🔥 **66 Days**
-- **Latest Published Lesson**: 📖 [Day 066: Virtual Environments & Package Management (pip)](Day066_Virtual_Environments_&_Package_Management_(pip).md)
-- **Up Next**: 🔜 **Day 067: Unit Testing with unittest Framework**
-- **Last Updated**: 🕒 `2026-08-24 06:42 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **74%** (67/90 Days)
+- **Current Streak**: 🔥 **67 Days**
+- **Latest Published Lesson**: 📖 [Day 067: Unit Testing with unittest Framework](Day067_Unit_Testing_with_unittest_Framework.md)
+- **Up Next**: 🔜 **Day 068: Modern Testing with pytest**
+- **Last Updated**: 🕒 `2026-08-25 01:42 UTC`
 
 ---
 
@@ -84,6 +84,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 064 | [Asynchronous Programming (asyncio) - Part 2](Day064_Asynchronous_Programming_(asyncio)_-_Part_2.md) | `Async Python` | Advanced |
 | Day 065 | [Functional Tools (functools & itertools)](Day065_Functional_Tools_(functools_&_itertools).md) | `Standard Library` | Advanced |
 | Day 066 | [Virtual Environments & Package Management (pip)](Day066_Virtual_Environments_&_Package_Management_(pip).md) | `DevOps & Tooling` | Intermediate |
+| Day 067 | [Unit Testing with unittest Framework](Day067_Unit_Testing_with_unittest_Framework.md) | `Testing` | Intermediate |
 
 ---
 
