@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **76%** (68/90 Days)
-- **Current Streak**: 🔥 **68 Days**
-- **Latest Published Lesson**: 📖 [Day 068: Modern Testing with pytest](Day068_Modern_Testing_with_pytest.md)
-- **Up Next**: 🔜 **Day 069: Mocking & Test Doubles (unittest.mock)**
-- **Last Updated**: 🕒 `2026-08-25 06:36 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **77%** (69/90 Days)
+- **Current Streak**: 🔥 **69 Days**
+- **Latest Published Lesson**: 📖 [Day 069: Mocking & Test Doubles (unittest.mock)](Day069_Mocking_&_Test_Doubles_(unittest.mock).md)
+- **Up Next**: 🔜 **Day 070: Milestone Project 3: Automated Weather CLI App**
+- **Last Updated**: 🕒 `2026-08-26 01:48 UTC`
 
 ---
 
@@ -86,6 +86,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 066 | [Virtual Environments & Package Management (pip)](Day066_Virtual_Environments_&_Package_Management_(pip).md) | `DevOps & Tooling` | Intermediate |
 | Day 067 | [Unit Testing with unittest Framework](Day067_Unit_Testing_with_unittest_Framework.md) | `Testing` | Intermediate |
 | Day 068 | [Modern Testing with pytest](Day068_Modern_Testing_with_pytest.md) | `Testing` | Intermediate |
+| Day 069 | [Mocking & Test Doubles (unittest.mock)](Day069_Mocking_&_Test_Doubles_(unittest.mock).md) | `Testing` | Advanced |
 
 ---
 
