@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **78%** (70/90 Days)
-- **Current Streak**: 🔥 **70 Days**
-- **Latest Published Lesson**: 📖 [Day 070: Milestone Project 3: Automated Weather CLI App](Day070_Milestone_Project_3:_Automated_Weather_CLI_App.md)
-- **Up Next**: 🔜 **Day 071: Introduction to NumPy & Arrays**
-- **Last Updated**: 🕒 `2026-08-26 06:36 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **79%** (71/90 Days)
+- **Current Streak**: 🔥 **71 Days**
+- **Latest Published Lesson**: 📖 [Day 071: Introduction to NumPy & Arrays](Day071_Introduction_to_NumPy_&_Arrays.md)
+- **Up Next**: 🔜 **Day 072: NumPy Array Slicing & Indexing**
+- **Last Updated**: 🕒 `2026-08-27 08:57 UTC`
 
 ---
 
@@ -88,6 +88,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 068 | [Modern Testing with pytest](Day068_Modern_Testing_with_pytest.md) | `Testing` | Intermediate |
 | Day 069 | [Mocking & Test Doubles (unittest.mock)](Day069_Mocking_&_Test_Doubles_(unittest.mock).md) | `Testing` | Advanced |
 | Day 070 | [Milestone Project 3: Automated Weather CLI App](Day070_Milestone_Project_3:_Automated_Weather_CLI_App.md) | `Project` | Intermediate |
+| Day 071 | [Introduction to NumPy & Arrays](Day071_Introduction_to_NumPy_&_Arrays.md) | `Data Science` | Intermediate |
 
 ---
 
