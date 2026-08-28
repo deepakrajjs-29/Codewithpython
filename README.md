@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **81%** (73/90 Days)
-- **Current Streak**: 🔥 **73 Days**
-- **Latest Published Lesson**: 📖 [Day 073: NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md)
-- **Up Next**: 🔜 **Day 074: Introduction to Pandas DataFrames**
-- **Last Updated**: 🕒 `2026-08-28 11:06 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **82%** (74/90 Days)
+- **Current Streak**: 🔥 **74 Days**
+- **Latest Published Lesson**: 📖 [Day 074: Introduction to Pandas DataFrames](Day074_Introduction_to_Pandas_DataFrames.md)
+- **Up Next**: 🔜 **Day 075: Pandas Data Selection & Filtering**
+- **Last Updated**: 🕒 `2026-08-28 18:07 UTC`
 
 ---
 
@@ -91,6 +91,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 071 | [Introduction to NumPy & Arrays](Day071_Introduction_to_NumPy_&_Arrays.md) | `Data Science` | Intermediate |
 | Day 072 | [NumPy Array Slicing & Indexing](Day072_NumPy_Array_Slicing_&_Indexing.md) | `Data Science` | Intermediate |
 | Day 073 | [NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md) | `Data Science` | Intermediate |
+| Day 074 | [Introduction to Pandas DataFrames](Day074_Introduction_to_Pandas_DataFrames.md) | `Data Science` | Intermediate |
 
 ---
 
