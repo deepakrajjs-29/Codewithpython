@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **80%** (72/90 Days)
-- **Current Streak**: 🔥 **72 Days**
-- **Latest Published Lesson**: 📖 [Day 072: NumPy Array Slicing & Indexing](Day072_NumPy_Array_Slicing_&_Indexing.md)
-- **Up Next**: 🔜 **Day 073: NumPy Reshaping & Broad Cast Mechanics**
-- **Last Updated**: 🕒 `2026-08-27 17:18 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **81%** (73/90 Days)
+- **Current Streak**: 🔥 **73 Days**
+- **Latest Published Lesson**: 📖 [Day 073: NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md)
+- **Up Next**: 🔜 **Day 074: Introduction to Pandas DataFrames**
+- **Last Updated**: 🕒 `2026-08-28 11:06 UTC`
 
 ---
 
@@ -90,6 +90,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 070 | [Milestone Project 3: Automated Weather CLI App](Day070_Milestone_Project_3:_Automated_Weather_CLI_App.md) | `Project` | Intermediate |
 | Day 071 | [Introduction to NumPy & Arrays](Day071_Introduction_to_NumPy_&_Arrays.md) | `Data Science` | Intermediate |
 | Day 072 | [NumPy Array Slicing & Indexing](Day072_NumPy_Array_Slicing_&_Indexing.md) | `Data Science` | Intermediate |
+| Day 073 | [NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md) | `Data Science` | Intermediate |
 
 ---
 
