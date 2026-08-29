@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **82%** (74/90 Days)
-- **Current Streak**: 🔥 **74 Days**
-- **Latest Published Lesson**: 📖 [Day 074: Introduction to Pandas DataFrames](Day074_Introduction_to_Pandas_DataFrames.md)
-- **Up Next**: 🔜 **Day 075: Pandas Data Selection & Filtering**
-- **Last Updated**: 🕒 `2026-08-28 18:07 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **83%** (75/90 Days)
+- **Current Streak**: 🔥 **75 Days**
+- **Latest Published Lesson**: 📖 [Day 075: Pandas Data Selection & Filtering](Day075_Pandas_Data_Selection_&_Filtering.md)
+- **Up Next**: 🔜 **Day 076: Handling Missing Data in Pandas**
+- **Last Updated**: 🕒 `2026-08-29 06:52 UTC`
 
 ---
 
@@ -92,6 +92,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 072 | [NumPy Array Slicing & Indexing](Day072_NumPy_Array_Slicing_&_Indexing.md) | `Data Science` | Intermediate |
 | Day 073 | [NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md) | `Data Science` | Intermediate |
 | Day 074 | [Introduction to Pandas DataFrames](Day074_Introduction_to_Pandas_DataFrames.md) | `Data Science` | Intermediate |
+| Day 075 | [Pandas Data Selection & Filtering](Day075_Pandas_Data_Selection_&_Filtering.md) | `Data Science` | Intermediate |
 
 ---
 
