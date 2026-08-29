@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ **83%** (75/90 Days)
-- **Current Streak**: 🔥 **75 Days**
-- **Latest Published Lesson**: 📖 [Day 075: Pandas Data Selection & Filtering](Day075_Pandas_Data_Selection_&_Filtering.md)
-- **Up Next**: 🔜 **Day 076: Handling Missing Data in Pandas**
-- **Last Updated**: 🕒 `2026-08-29 06:52 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **84%** (76/90 Days)
+- **Current Streak**: 🔥 **76 Days**
+- **Latest Published Lesson**: 📖 [Day 076: Handling Missing Data in Pandas](Day076_Handling_Missing_Data_in_Pandas.md)
+- **Up Next**: 🔜 **Day 077: Pandas GroupBy & Aggregation**
+- **Last Updated**: 🕒 `2026-08-29 12:13 UTC`
 
 ---
 
@@ -93,6 +93,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 073 | [NumPy Reshaping & Broad Cast Mechanics](Day073_NumPy_Reshaping_&_Broad_Cast_Mechanics.md) | `Data Science` | Intermediate |
 | Day 074 | [Introduction to Pandas DataFrames](Day074_Introduction_to_Pandas_DataFrames.md) | `Data Science` | Intermediate |
 | Day 075 | [Pandas Data Selection & Filtering](Day075_Pandas_Data_Selection_&_Filtering.md) | `Data Science` | Intermediate |
+| Day 076 | [Handling Missing Data in Pandas](Day076_Handling_Missing_Data_in_Pandas.md) | `Data Science` | Intermediate |
 
 ---
 
