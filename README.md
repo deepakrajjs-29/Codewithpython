@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **88%** (79/90 Days)
-- **Current Streak**: 🔥 **79 Days**
-- **Latest Published Lesson**: 📖 [Day 079: Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md)
-- **Up Next**: 🔜 **Day 080: Exploratory Data Analysis (EDA) Project**
-- **Last Updated**: 🕒 `2026-08-31 05:12 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **89%** (80/90 Days)
+- **Current Streak**: 🔥 **80 Days**
+- **Latest Published Lesson**: 📖 [Day 080: Exploratory Data Analysis (EDA) Project](Day080_Exploratory_Data_Analysis_(EDA)_Project.md)
+- **Up Next**: 🔜 **Day 081: Creational Design Patterns (Factory & Singleton)**
+- **Last Updated**: 🕒 `2026-08-31 12:27 UTC`
 
 ---
 
@@ -97,6 +97,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 077 | [Pandas GroupBy & Aggregation](Day077_Pandas_GroupBy_&_Aggregation.md) | `Data Science` | Intermediate |
 | Day 078 | [Merging & Joining DataFrames](Day078_Merging_&_Joining_DataFrames.md) | `Data Science` | Intermediate |
 | Day 079 | [Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md) | `Data Visualization` | Intermediate |
+| Day 080 | [Exploratory Data Analysis (EDA) Project](Day080_Exploratory_Data_Analysis_(EDA)_Project.md) | `Project` | Intermediate |
 
 ---
 
