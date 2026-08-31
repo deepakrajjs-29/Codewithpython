@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **87%** (78/90 Days)
-- **Current Streak**: 🔥 **78 Days**
-- **Latest Published Lesson**: 📖 [Day 078: Merging & Joining DataFrames](Day078_Merging_&_Joining_DataFrames.md)
-- **Up Next**: 🔜 **Day 079: Data Visualization with Matplotlib**
-- **Last Updated**: 🕒 `2026-08-30 11:00 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **88%** (79/90 Days)
+- **Current Streak**: 🔥 **79 Days**
+- **Latest Published Lesson**: 📖 [Day 079: Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md)
+- **Up Next**: 🔜 **Day 080: Exploratory Data Analysis (EDA) Project**
+- **Last Updated**: 🕒 `2026-08-31 05:12 UTC`
 
 ---
 
@@ -96,6 +96,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 076 | [Handling Missing Data in Pandas](Day076_Handling_Missing_Data_in_Pandas.md) | `Data Science` | Intermediate |
 | Day 077 | [Pandas GroupBy & Aggregation](Day077_Pandas_GroupBy_&_Aggregation.md) | `Data Science` | Intermediate |
 | Day 078 | [Merging & Joining DataFrames](Day078_Merging_&_Joining_DataFrames.md) | `Data Science` | Intermediate |
+| Day 079 | [Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md) | `Data Visualization` | Intermediate |
 
 ---
 
