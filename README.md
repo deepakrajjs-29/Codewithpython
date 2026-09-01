@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **90%** (81/90 Days)
-- **Current Streak**: 🔥 **81 Days**
-- **Latest Published Lesson**: 📖 [Day 081: Creational Design Patterns (Factory & Singleton)](Day081_Creational_Design_Patterns_(Factory_&_Singleton).md)
-- **Up Next**: 🔜 **Day 082: Structural Design Patterns (Adapter & Decorator)**
-- **Last Updated**: 🕒 `2026-09-01 04:52 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **91%** (82/90 Days)
+- **Current Streak**: 🔥 **82 Days**
+- **Latest Published Lesson**: 📖 [Day 082: Structural Design Patterns (Adapter & Decorator)](Day082_Structural_Design_Patterns_(Adapter_&_Decorator).md)
+- **Up Next**: 🔜 **Day 083: Behavioral Design Patterns (Observer & Strategy)**
+- **Last Updated**: 🕒 `2026-09-01 10:55 UTC`
 
 ---
 
@@ -99,6 +99,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 079 | [Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md) | `Data Visualization` | Intermediate |
 | Day 080 | [Exploratory Data Analysis (EDA) Project](Day080_Exploratory_Data_Analysis_(EDA)_Project.md) | `Project` | Intermediate |
 | Day 081 | [Creational Design Patterns (Factory & Singleton)](Day081_Creational_Design_Patterns_(Factory_&_Singleton).md) | `Design Patterns` | Advanced |
+| Day 082 | [Structural Design Patterns (Adapter & Decorator)](Day082_Structural_Design_Patterns_(Adapter_&_Decorator).md) | `Design Patterns` | Advanced |
 
 ---
 
