@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ **89%** (80/90 Days)
-- **Current Streak**: 🔥 **80 Days**
-- **Latest Published Lesson**: 📖 [Day 080: Exploratory Data Analysis (EDA) Project](Day080_Exploratory_Data_Analysis_(EDA)_Project.md)
-- **Up Next**: 🔜 **Day 081: Creational Design Patterns (Factory & Singleton)**
-- **Last Updated**: 🕒 `2026-08-31 12:27 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **90%** (81/90 Days)
+- **Current Streak**: 🔥 **81 Days**
+- **Latest Published Lesson**: 📖 [Day 081: Creational Design Patterns (Factory & Singleton)](Day081_Creational_Design_Patterns_(Factory_&_Singleton).md)
+- **Up Next**: 🔜 **Day 082: Structural Design Patterns (Adapter & Decorator)**
+- **Last Updated**: 🕒 `2026-09-01 04:52 UTC`
 
 ---
 
@@ -98,6 +98,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 078 | [Merging & Joining DataFrames](Day078_Merging_&_Joining_DataFrames.md) | `Data Science` | Intermediate |
 | Day 079 | [Data Visualization with Matplotlib](Day079_Data_Visualization_with_Matplotlib.md) | `Data Visualization` | Intermediate |
 | Day 080 | [Exploratory Data Analysis (EDA) Project](Day080_Exploratory_Data_Analysis_(EDA)_Project.md) | `Project` | Intermediate |
+| Day 081 | [Creational Design Patterns (Factory & Singleton)](Day081_Creational_Design_Patterns_(Factory_&_Singleton).md) | `Design Patterns` | Advanced |
 
 ---
 
