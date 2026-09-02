@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **92%** (83/90 Days)
-- **Current Streak**: 🔥 **83 Days**
-- **Latest Published Lesson**: 📖 [Day 083: Behavioral Design Patterns (Observer & Strategy)](Day083_Behavioral_Design_Patterns_(Observer_&_Strategy).md)
-- **Up Next**: 🔜 **Day 084: Memory Management & Garbage Collection**
-- **Last Updated**: 🕒 `2026-09-02 04:09 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **93%** (84/90 Days)
+- **Current Streak**: 🔥 **84 Days**
+- **Latest Published Lesson**: 📖 [Day 084: Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md)
+- **Up Next**: 🔜 **Day 085: Performance Optimization & Profiling**
+- **Last Updated**: 🕒 `2026-09-02 10:22 UTC`
 
 ---
 
@@ -101,6 +101,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 081 | [Creational Design Patterns (Factory & Singleton)](Day081_Creational_Design_Patterns_(Factory_&_Singleton).md) | `Design Patterns` | Advanced |
 | Day 082 | [Structural Design Patterns (Adapter & Decorator)](Day082_Structural_Design_Patterns_(Adapter_&_Decorator).md) | `Design Patterns` | Advanced |
 | Day 083 | [Behavioral Design Patterns (Observer & Strategy)](Day083_Behavioral_Design_Patterns_(Observer_&_Strategy).md) | `Design Patterns` | Advanced |
+| Day 084 | [Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md) | `Advanced Python` | Advanced |
 
 ---
 
