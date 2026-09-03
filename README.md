@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **93%** (84/90 Days)
-- **Current Streak**: 🔥 **84 Days**
-- **Latest Published Lesson**: 📖 [Day 084: Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md)
-- **Up Next**: 🔜 **Day 085: Performance Optimization & Profiling**
-- **Last Updated**: 🕒 `2026-09-02 10:22 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **94%** (85/90 Days)
+- **Current Streak**: 🔥 **85 Days**
+- **Latest Published Lesson**: 📖 [Day 085: Performance Optimization & Profiling](Day085_Performance_Optimization_&_Profiling.md)
+- **Up Next**: 🔜 **Day 086: CapStone Architecture & Design Phase**
+- **Last Updated**: 🕒 `2026-09-03 04:06 UTC`
 
 ---
 
@@ -102,6 +102,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 082 | [Structural Design Patterns (Adapter & Decorator)](Day082_Structural_Design_Patterns_(Adapter_&_Decorator).md) | `Design Patterns` | Advanced |
 | Day 083 | [Behavioral Design Patterns (Observer & Strategy)](Day083_Behavioral_Design_Patterns_(Observer_&_Strategy).md) | `Design Patterns` | Advanced |
 | Day 084 | [Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md) | `Advanced Python` | Advanced |
+| Day 085 | [Performance Optimization & Profiling](Day085_Performance_Optimization_&_Profiling.md) | `Advanced Python` | Advanced |
 
 ---
 
