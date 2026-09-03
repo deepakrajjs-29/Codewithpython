@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **94%** (85/90 Days)
-- **Current Streak**: 🔥 **85 Days**
-- **Latest Published Lesson**: 📖 [Day 085: Performance Optimization & Profiling](Day085_Performance_Optimization_&_Profiling.md)
-- **Up Next**: 🔜 **Day 086: CapStone Architecture & Design Phase**
-- **Last Updated**: 🕒 `2026-09-03 04:06 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **96%** (86/90 Days)
+- **Current Streak**: 🔥 **86 Days**
+- **Latest Published Lesson**: 📖 [Day 086: CapStone Architecture & Design Phase](Day086_CapStone_Architecture_&_Design_Phase.md)
+- **Up Next**: 🔜 **Day 087: CapStone Core Logic Implementation**
+- **Last Updated**: 🕒 `2026-09-03 10:30 UTC`
 
 ---
 
@@ -103,6 +103,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 083 | [Behavioral Design Patterns (Observer & Strategy)](Day083_Behavioral_Design_Patterns_(Observer_&_Strategy).md) | `Design Patterns` | Advanced |
 | Day 084 | [Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md) | `Advanced Python` | Advanced |
 | Day 085 | [Performance Optimization & Profiling](Day085_Performance_Optimization_&_Profiling.md) | `Advanced Python` | Advanced |
+| Day 086 | [CapStone Architecture & Design Phase](Day086_CapStone_Architecture_&_Design_Phase.md) | `Capstone` | Advanced |
 
 ---
 
