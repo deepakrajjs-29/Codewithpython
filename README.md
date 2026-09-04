@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **96%** (86/90 Days)
-- **Current Streak**: 🔥 **86 Days**
-- **Latest Published Lesson**: 📖 [Day 086: CapStone Architecture & Design Phase](Day086_CapStone_Architecture_&_Design_Phase.md)
-- **Up Next**: 🔜 **Day 087: CapStone Core Logic Implementation**
-- **Last Updated**: 🕒 `2026-09-03 10:30 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **97%** (87/90 Days)
+- **Current Streak**: 🔥 **87 Days**
+- **Latest Published Lesson**: 📖 [Day 087: CapStone Core Logic Implementation](Day087_CapStone_Core_Logic_Implementation.md)
+- **Up Next**: 🔜 **Day 088: CapStone API & Persistence Layer**
+- **Last Updated**: 🕒 `2026-09-04 04:12 UTC`
 
 ---
 
@@ -104,6 +104,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 084 | [Memory Management & Garbage Collection](Day084_Memory_Management_&_Garbage_Collection.md) | `Advanced Python` | Advanced |
 | Day 085 | [Performance Optimization & Profiling](Day085_Performance_Optimization_&_Profiling.md) | `Advanced Python` | Advanced |
 | Day 086 | [CapStone Architecture & Design Phase](Day086_CapStone_Architecture_&_Design_Phase.md) | `Capstone` | Advanced |
+| Day 087 | [CapStone Core Logic Implementation](Day087_CapStone_Core_Logic_Implementation.md) | `Capstone` | Advanced |
 
 ---
 
