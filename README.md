@@ -6,11 +6,11 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 
 ## 📊 Course Dashboard
 
-- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 **98%** (88/90 Days)
-- **Current Streak**: 🔥 **88 Days**
-- **Latest Published Lesson**: 📖 [Day 088: CapStone API & Persistence Layer](Day088_CapStone_API_&_Persistence_Layer.md)
-- **Up Next**: 🔜 **Day 089: CapStone Testing & Code Refactoring**
-- **Last Updated**: 🕒 `2026-09-04 10:21 UTC`
+- **Overall Progress**: 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 **99%** (89/90 Days)
+- **Current Streak**: 🔥 **89 Days**
+- **Latest Published Lesson**: 📖 [Day 089: CapStone Testing & Code Refactoring](Day089_CapStone_Testing_&_Code_Refactoring.md)
+- **Up Next**: 🔜 **Day 090: CapStone Final Deployment & Packaging**
+- **Last Updated**: 🕒 `2026-09-05 04:07 UTC`
 
 ---
 
@@ -106,6 +106,7 @@ Welcome to **Codewithpython** -- a structured, beginner-to-intermediate Python c
 | Day 086 | [CapStone Architecture & Design Phase](Day086_CapStone_Architecture_&_Design_Phase.md) | `Capstone` | Advanced |
 | Day 087 | [CapStone Core Logic Implementation](Day087_CapStone_Core_Logic_Implementation.md) | `Capstone` | Advanced |
 | Day 088 | [CapStone API & Persistence Layer](Day088_CapStone_API_&_Persistence_Layer.md) | `Capstone` | Advanced |
+| Day 089 | [CapStone Testing & Code Refactoring](Day089_CapStone_Testing_&_Code_Refactoring.md) | `Capstone` | Advanced |
 
 ---
 
